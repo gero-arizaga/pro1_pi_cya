@@ -124,4 +124,42 @@ header .contenedor{
     max-width: 100%;
 }
 
+.item{
+    padding: 15px;
+    width: 150px;
+}
+img{
+    height: 390px;
+}
 
+p{
+    color: white;
+    text-align: start;
+    font-family:'Open Sans', sans-serif; 
+}
+
+.titulos{
+    color: white ;
+}
+
+.cont{
+    display:  flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 650px;
+    padding: 15px;
+}
+
+/* footer */
+footer{
+    background-color: black;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
