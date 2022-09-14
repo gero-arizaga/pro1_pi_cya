@@ -90,38 +90,20 @@ align-items: flex-end;
     margin-right: 20px;
 }
 
+
+    
+
 .peliculas-populares{
-    font-size: 50px;
-    background-color: cornsilk;
-    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-items: center;
     margin-bottom: 3.12em;
     width: 1330px;
     height: 40px;
-    padding: 20px;
-    
+    font-size: 50px;
+    background-color: cornsilk;
 
-}
-
-
-
-@media screen and (max-width: 800px){
-    header .logo{
-        margin-bottom: 20px;
-        font-size: 50px;
-    }
-}
-    
-header .contenedor{
-    flex-direction: column;
-    text-align: center;
-}
-
-.pelicula-principal{
-    font-size: 14px;
-}
-
-.pelicula-principal .descripcion{
-    max-width: 100%;
 }
 
 .item{
@@ -162,4 +144,26 @@ footer{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
+}
+
+/* medida queries */
+
+@media screen and (max-width: 800px){
+    header .logo{
+        margin-bottom: 20px;
+        font-size: 50px;
+    }
+}
+    
+header .contenedor{
+    flex-direction: column;
+    text-align: center;
+}
+
+.pelicula-principal{
+    font-size: 14px;
+}
+
+.pelicula-principal .descripcion{
+    max-width: 100%;
 }
