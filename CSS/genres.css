@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-align: end;
 }
 
 body{
@@ -42,11 +43,7 @@ header nav a:hover,
 header nav a.activo{
     color: #FFF;
 }
-/sinopsis{
-    #font-family: 'Enriqueta', serif;
-    #font-size:15px;
-    #padding: 5%;*/
-  }
+
   .programas{
     display: grid;
     grid-template-rows: 200px 200px;
@@ -63,8 +60,7 @@ header nav a.activo{
     grid-template-rows: 50px;
     grid-gap: 5%;
   }
-
-  grid-template-columns: 2fr 4fr;
+grid-template-columns: 2fr 4fr;
   ul{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -78,3 +74,28 @@ header nav a.activo{
     align-items: center;
     justify-content: center;
   }
+
+  .generos{
+    color: white;
+  }
+
+@media screen and (max-width: 800px){
+    header .logo{
+        margin-bottom: 20px;
+        font-size: 50px;
+    }
+}
+    
+header .contenedor{
+    flex-direction: block;
+    text-align: center;
+}
+
+.pelicula-principal{
+    font-size: 14px;
+}
+
+.pelicula-principal .descripcion{
+    max-width: 100%;
+}
+
