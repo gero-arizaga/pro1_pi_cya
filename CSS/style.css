@@ -167,3 +167,13 @@ header .contenedor{
 .pelicula-principal .descripcion{
     max-width: 100%;
 }
+
+#@media screen  and (max-width: 800px) {
+    main .{
+        max-width: 100%;
+        flex-direction: column;
+        text-align: center;
+        font-size: 14px;
+    }
+}
+    
