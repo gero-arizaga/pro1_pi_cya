@@ -42,10 +42,10 @@ header nav a:hover,
 header nav a.activo{
     color: #FFF;
 }
-.sinopsis{
-    font-family: 'Enriqueta', serif;
-    font-size:15px;
-    padding: 5%;
+/sinopsis{
+    #font-family: 'Enriqueta', serif;
+    #font-size:15px;
+    #padding: 5%;*/
   }
   .programas{
     display: grid;
@@ -61,9 +61,10 @@ header nav a.activo{
   header{
     display: grid;
     grid-template-rows: 50px;
-    grid-template-columns: 2fr 4fr;
     grid-gap: 5%;
   }
+
+  grid-template-columns: 2fr 4fr;
   ul{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
