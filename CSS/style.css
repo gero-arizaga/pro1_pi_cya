@@ -168,7 +168,7 @@ header .contenedor{
     max-width: 100%;
 }
 
-#@media screen  and (max-width: 800px) {
+@media screen  and (max-width: 800px) {
     main .{
         max-width: 100%;
         flex-direction: column;

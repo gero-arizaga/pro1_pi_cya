@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.contenedor{
+    width: 90%;
+    margin: auto;
+}
+
+header{
+    padding: 30px 0;
+}
+
+header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logotipo{
+    font-family: 'Bebas Neue';
+    font-weight: normal;
+    color: blue;
+    font-size: 40px;
+}
+
+header nav a{
+    color: #AAA;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo{
+    color: #FFF;
+}
+
+@media screen and (max-width: 800px){
+    header .logo{
+        margin-bottom: 20px;
+        font-size: 50px;
+    }
+}
+    
+header .contenedor{
+    flex-direction: column;
+    text-align: center;
+}
+
+.pelicula-principal{
+    font-size: 14px;
+}
+
+.pelicula-principal .descripcion{
+    max-width: 100%;
+}
+
+@media screen  and (max-width: 800px) {
+    main .{
+        max-width: 100%;
+        flex-direction: column;
+        text-align: center;
+        font-size: 14px;
+    }
+}
+    
+
+    
