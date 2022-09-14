@@ -126,12 +126,10 @@ p{
 
 .cont{
     display:  flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 650px;
-    padding: 15px;
+    
 }
 
 /* footer */
@@ -153,6 +151,11 @@ footer{
         margin-bottom: 20px;
         font-size: 50px;
     }
+    .cont{
+        display: block;
+        height: auto;
+
+    }
 }
     
 header .contenedor{
@@ -168,12 +171,5 @@ header .contenedor{
     max-width: 100%;
 }
 
-#@media screen  and (max-width: 800px) {
-    main .{
-        max-width: 100%;
-        flex-direction: column;
-        text-align: center;
-        font-size: 14px;
-    }
-}
+
     
