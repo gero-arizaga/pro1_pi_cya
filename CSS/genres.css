@@ -75,8 +75,9 @@ grid-template-columns: 2fr 4fr;
     justify-content: center;
   }
 
-  .generos{
-    color: white;
+  main .generos{
+    font-size: 45px;
+    font-weight: normal;
   }
 
 @media screen and (max-width: 800px){
