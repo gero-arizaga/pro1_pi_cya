@@ -62,4 +62,54 @@ header .contenedor{
 .pelicula-principal .descripcion{
     max-width: 100%;
 }
+.peliculas-populares{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 3.12em;
+    width: 1330px;
+    height: 40px;
+    font-size: 50px;
+    background-color: cornsilk;
+
+}
+
+.item{
+    padding: 15px;
+    width: 150px;
+}
+img{
+    width: 200px
+}
+
+p{
+    color: white;
+    text-align: start;
+    font-family:'Open Sans', sans-serif; 
+}
+
+.titulos{
+    color: white ;
+}
+
+.cont{
+    display:  flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 650px;
+    
+}
+
+/* footer */
+footer{
+    background-color: black;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
 

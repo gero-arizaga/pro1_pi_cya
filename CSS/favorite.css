@@ -91,17 +91,17 @@ header nav a.activo{
         margin-bottom: 20px;
         font-size: 50px;
     }
+    header .contenedor{
+        flex-direction: block;
+        text-align: center;
+    }
+    
+    .pelicula-principal{
+        font-size: 14px;
+    }
+    
+    .pelicula-principal .descripcion{
+        max-width: 100%;
+    }
 }
     
-header .contenedor{
-    flex-direction: block;
-    text-align: center;
-}
-
-.pelicula-principal{
-    font-size: 14px;
-}
-
-.pelicula-principal .descripcion{
-    max-width: 100%;
-}
