@@ -61,26 +61,47 @@ header nav a.activo{
     grid-gap: 5%;
 
   }
+.generosPadre{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
 
+}
   .generos{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     align-self: center;
-  
-  }
+    background-color: rgba(170, 170, 170, 0.393);
+    padding: 100px;
+    margin: 120px;
+    border-radius: 100px;
+}  
   .genero-item{
-    display: grid;
+    display: flex;
     align-items: center;
     justify-content: center;
+   text-decoration: none;
+   color: white;
   }
 
   main .generos{
     font-size: 45px;
     font-weight: normal;
+    height: 100vh;
   }
-
+.main-generos{
+  background-image: url("../img/joker.jpg");
+background-repeat: no-repeat;
+background-position:center;
+background-size: cover;
+}
+footer{
+  height: 15%;
+}
 @media screen and (max-width: 800px){
     header .logo{
         margin-bottom: 20px;

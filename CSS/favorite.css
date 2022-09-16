@@ -50,40 +50,8 @@ header nav a.activo{
           margin-bottom: 20px;
           font-size: 50px;
       }
-  .programas{
-    display: grid;
-    grid-template-rows: 200px 200px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 3%;
-    padding: 5%;
-  }
-  .imagenPeliculas{
-    width: 100%;
-    height: 100%;
-  }
-  header{
-    display: grid;
-    grid-template-rows: 50px;
-    grid-gap: 5%;
-    grid-template-columns: 2fr 4fr;
-  }
 
-  ul{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    list-style: none;
-    align-items: center;
-    justify-content: center;
-  
-  }
-  li{
-    display: grid;
-    align-items: center;
-    justify-content: center;
-  }
 
-  .generos{
-    color: white;
   }
 
 @media screen and (max-width: 800px){
@@ -104,4 +72,18 @@ header nav a.activo{
         max-width: 100%;
     }
 }
+.item{
+    padding: 15px;
+    width: 150px;
+}
+.cont{
+    display:  flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 650px;
     
+}
+.titulos{
+    color: white;
+
+}
