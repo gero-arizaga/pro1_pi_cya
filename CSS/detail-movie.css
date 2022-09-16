@@ -62,4 +62,11 @@ pelicula-principal{
 .pelicula-principal .descripcion{
     max-width: 100%;
 }
-
+main{
+    background-image: url("../img/Thor\ grande.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    
+}
