@@ -59,6 +59,15 @@ header nav a.activo{
     display: grid;
     grid-template-rows: 50px;
     grid-gap: 5%;
+<<<<<<< HEAD
+    grid-template-columns: 2fr 4fr;
+  }
+
+  ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style: none;
+
 
   }
 .generosPadre{
@@ -107,18 +116,19 @@ footer{
         margin-bottom: 20px;
         font-size: 50px;
     }
+    header .contenedor{
+      flex-direction: block;
+      text-align: center;
+  }
+  
+  .pelicula-principal{
+      font-size: 14px;
+  }
+  
+  .pelicula-principal .descripcion{
+      max-width: 100%;
+  }
+  
 }
     
-header .contenedor{
-    flex-direction: block;
-    text-align: center;
-}
-
-.pelicula-principal{
-    font-size: 14px;
-}
-
-.pelicula-principal .descripcion{
-    max-width: 100%;
-}
 
