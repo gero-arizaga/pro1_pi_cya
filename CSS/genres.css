@@ -59,8 +59,6 @@ header nav a.activo{
     display: grid;
     grid-template-rows: 50px;
     grid-gap: 5%;
-<<<<<<< HEAD
-    grid-template-columns: 2fr 4fr;
   }
 
   ul{
