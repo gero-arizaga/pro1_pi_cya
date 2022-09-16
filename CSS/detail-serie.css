@@ -10,7 +10,9 @@ body{
     font-family: 'Open Sans', sans-serif;
 
 }
-
+main .cont{
+    text-align: center;
+}
 .contenedor{
     width: 90%;
     margin: auto;
@@ -60,8 +62,13 @@ header nav a.activo{
     grid-template-rows: 50px;
     grid-gap: 5%;
   }
+  .item{
+    padding: 15px;
+    width: 150px;
 
-  grid-template-columns: 2fr 4fr;
+}
+
+  
   ul{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
