@@ -59,6 +59,7 @@ header nav a.activo{
     display: grid;
     grid-template-rows: 50px;
     grid-gap: 5%;
+<<<<<<< HEAD
     grid-template-columns: 2fr 4fr;
   }
 
@@ -66,11 +67,20 @@ header nav a.activo{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     list-style: none;
+=======
+
+  }
+
+  .generos{
+    display: flex;
+>>>>>>> 6fdd8e724558fa161cff01902dc3c337a4a5ba25
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    align-self: center;
   
   }
-  li{
+  .genero-item{
     display: grid;
     align-items: center;
     justify-content: center;
