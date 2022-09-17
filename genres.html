@@ -12,31 +12,33 @@
         <div class="contenedor">
             <h2 class="logotipo"> PelisPlay</h2>
             <nav>
-            <a href="./index.html" class="activo"> Inicio</a>
-            <a href="./favorite.html"> Peliculas Populares</a>
-            <a href="./detail-serie.html"> Series Populares</a>
-            <a href="./genres.html"> Generos </a>
+            <a href="./index.html"> Inicio</a>
+            <a href="./detail-movie.html"> Peliculas</a>
+            <a href="./detail-serie.html"> Series</a>
+            <a href="./genres.html" class="activo"> Generos </a>
             <a href="./favorite.html"> Favoritos </a>
              </nav>
+             <article>
+                <form action="search-results.html" method="get">
+                    <div>
+                        <input type="text" name="busqueda">
+                    </div>
+                    <div>
+                        <button type="submit">Buscar</button>
+                    </div>
+                </form>
+             </article>
          </div>
          
-         <article>
-            <form action="search-results.html" method="get">
-                <div>
-                    <input type="text" name="busqueda">
-                </div>
-                <div>
-                    <button type="submit">Buscar</button>
-                </div>
-            </form>
-         </article>
+         
 
-    <main>
-        <section class="generos">
-            <article class="genero-item"><a href="./detail-genres.html">Comedia</a></article>
-            <article class="genero-item"><a href="./detail-genres.html">Terror</a></article>
-            <article class="genero-item"><a href="./detail-genres.html">Accion</a></article>
-            <article class="genero-item"><a href="./detail-genres.html">Infantiles</a></article>
+    <main class="main-generos">
+        <section class="generosPadre">
+            <article class="generos">
+            <a class="genero-item" href="./detail-genres.html">Comedia</a>
+            <a class="genero-item" href="./detail-genres.html">Terror</a>
+            <a class="genero-item" href="./detail-genres.html">Accion</a>
+            <a class="genero-item" href="./detail-genres.html">Infantiles</a>
         </article>
         </main>
        

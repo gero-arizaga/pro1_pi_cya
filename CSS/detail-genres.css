@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: block;
 }
 
 body{
@@ -43,17 +43,9 @@ header nav a.activo{
     color: #FFF;
 }
 
-@media screen and (max-width: 800px){
-    header .logo{
-        margin-bottom: 20px;
-        font-size: 50px;
-    }
-}
+
     
-header .contenedor{
-    flex-direction: column;
-    text-align: center;
-}
+
 
 .pelicula-principal{
     font-size: 14px;
@@ -91,6 +83,7 @@ p{
 
 .titulos{
     color: white ;
+    padding: 35px;
 }
 
 .cont{
@@ -98,6 +91,7 @@ p{
     justify-content: space-around;
     align-items: center;
     height: 650px;
+    width: 96%;
     
 }
 
@@ -113,3 +107,23 @@ footer{
     justify-content: space-between;
 }
 
+@media screen and (max-width: 800px){
+    header .logo{
+        margin-bottom: 20px;
+        font-size: 50px;
+    }
+    .cont{
+        display: block;
+        justify-content: space-around;
+        align-items: center;
+        height: 650px;
+        width: 96%;
+
+    }
+    
+    header .contenedor {
+    flex-direction: column;
+    text-align: center;
+    }
+    
+}

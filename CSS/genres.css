@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-align: end;
+    text-align: block;
 }
 
 body{
@@ -56,7 +56,7 @@ header nav a.activo{
     height: 100%;
   }
   header{
-    display: grid;
+    display: block;
     grid-template-rows: 50px;
     grid-gap: 5%;
   }
@@ -68,34 +68,58 @@ header nav a.activo{
 
 
   }
-
-  .generos{
+.generosPadre{
+    display: block
+    
+}
+ 
+.generos{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     align-self: center;
-  
-  }
+    background-color: rgba(170, 170, 170, 0.393);
+    padding: 100px;
+    margin: 120px;
+    border-radius: 100px;
+}  
   .genero-item{
-    display: grid;
+    display: flex;
     align-items: center;
     justify-content: center;
+   text-decoration: none;
+   color: white;
   }
 
   main .generos{
     font-size: 45px;
     font-weight: normal;
+    height: 100vh;
   }
 
+  .main-generos{
+  background-image: url("../img/joker.jpg");
+background-repeat: no-repeat;
+background-position:center;
+background-size: cover;
+}
+
+footer{
+  height: 15%;
+}
+
+/* media queries general header */
+
 @media screen and (max-width: 800px){
-    header .logo{
-        margin-bottom: 20px;
-        font-size: 50px;
-    }
-    header .contenedor{
+  header .logo{
+      margin-bottom: 20px;
+      font-size: 50px;
+  }
+  header .contenedor{
       flex-direction: block;
       text-align: center;
+      display: block;
   }
   
   .pelicula-principal{
@@ -104,8 +128,11 @@ header nav a.activo{
   
   .pelicula-principal .descripcion{
       max-width: 100%;
+      text-align: left;
   }
+      
   
 }
+
     
 

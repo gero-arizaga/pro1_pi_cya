@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tus Favoritos</title>
     <link rel="stylesheet" href="./CSS/favorite.css">
 </head>
 <body>
@@ -12,33 +12,64 @@
       <div class="contenedor">
           <h2 class="logotipo"> PelisPlay</h2>
           <nav>
-          <a href="./index.html" class="activo"> Inicio</a>
-          <a href="./favorite.html"> Peliculas Populares</a>
-          <a href="./detail-serie.html"> Series Populares</a>
+          <a href="./index.html"> Inicio</a>
+          <a href="./detail-movie.html"> Peliculas </a>
+          <a href="./detail-serie.html"> Series </a>
           <a href="./genres.html"> Generos </a>
-          <a href="./favorite.html"> Favoritos </a>
+          <a href="./favorite.html"class="activo"> Favoritos </a>
            </nav>
+           <article>
+            <form action="search-results.html" method="get">
+                <div>
+                    <input type="text" name="busqueda">
+                </div>
+                <div>
+                    <button type="submit">Buscar</button>
+                </div>
+            </form>
+         </article> 
        </div>
 
-       <article>
-        <form action="search-results.html" method="get">
-            <div>
-                <input type="text" name="busqueda">
-            </div>
-            <div>
-                <button type="submit">Buscar</button>
-            </div>
-        </form>
-     </article>
+       
   </header>
   <main>
-    <h2 class="titulos">Agregados Recientemente</h2>
-        
-        <section class="cont">
+    <div class="agregados recientemente contenedor">
+    <h2 class="titulos">Tus Favoritos</h2>
+          <section class="cont">
             <article class="item">
-                <h3 class="subtitulos"></h3>
-                <a href="#"><img src="" alt=""></a>
-                <p></p>
+                <h3 class="subtitulos">Thor Love And Thunder</h3>
+                <a href="#"><img src="./img/thor love and thunder.jpeg" alt="Thor"></a>
+                <p>Fantasía, Acción Y Comedia - 1h 59m</p>
             </article>
             
+            <article class="item">
+                <h3 class="subtitulos">Malefica</h3>
+                <a href="#"><img src="./img/malefica2.jpeg" alt="Malefica"></a>
+                <p>Fantasía, Aventura - 1h 37m</p>
+            </article>
+           
+            <article class="item">
+                <h3 class="subtitulos"> Jurassic World</h3>
+                <a href="#"><img src="./img/jurassic world.jpeg" alt="Jurassic World"></a>
+                <p>Aventura, Acción, Ciencia ficción - 2h 27m</p>
+            </article>
+            
+            <article class="item">
+                <h3 class="subtitulos">Top Gun: Maverick</h3>
+                <a href="#"><img src="./img/top gun.jpeg" alt="Top Gun: Maverick"></a>
+                <p> Acción, Drama -  2h 11m</p>
+            </article>
+            
+            <article class="item">
+                <h3 class="subtitulos">Pinocho </h3>
+                <a href="#"><img src="./img/pinocho.jpeg" alt="Pinocho"></a>
+                <p> Aventura, Drama -  1h 11m</p>
+            </article>
+        </section>
+    </div>
   </main>
+  <footer>
+
+  </footer>
+</body>
+</html>

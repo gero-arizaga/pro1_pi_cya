@@ -12,28 +12,39 @@
         <div class="contenedor">
             <h2 class="logotipo"> PelisPlay</h2>
             <nav>
-            <a href="./index.html" class="activo"> Inicio</a>
-            <a href="./favorite.html"> Peliculas Populares</a>
-            <a href="./detail-serie.html"> Series Populares</a>
+            <a href="./index.html"> Inicio</a>
+            <a href="./detail-movie.html"> Peliculas</a>
+            <a href="./detail-serie.html" class="activo"> Series</a>
             <a href="./genres.html"> Generos </a>
             <a href="./favorite.html"> Favoritos </a>
              </nav>
+             <article>
+                <form action="search-results.html" method="get">
+                    <div>
+                        <input type="text" name="busqueda">
+                    </div>
+                    <div>
+                        <button type="submit">Buscar</button>
+                    </div>
+                </form>
+             </article>
+    
          </div>
 
-         <article>
-            <form action="search-results.html" method="get">
-                <div>
-                    <input type="text" name="busqueda">
-                </div>
-                <div>
-                    <button type="submit">Buscar</button>
-                </div>
-            </form>
-         </article>
-
+         
          
     </header>
-    
+    <main class="main-serie">
+        
+        <section class="cont">
+            <article class="item">
+                <h3 class="subtitulos">Peaky Blinders</h3>
+                <p>Estreno: 12 de Septiembre 2013</p>
+                <p>Accion, Drama</p>
+                <p>Una familia de pandilleros asentada en Birmingham, Reino Unido, tras la Primera Guerra Mundial (1914-1918), dirige un local de apuestas hípicas. Las actividades del ambicioso jefe de la banda llaman la atención del Inspector jefe Chester Campbell, un detective de la Real Policía Irlandesa que es enviado desde Belfast para limpiar la ciudad y acabar con la banda.</p>
+                </article>        
+        </section>
+
     </main>
 </body>
 </html>

@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-align: end;
 }
 
 body{
@@ -11,7 +10,8 @@ body{
 
 }
 main .cont{
-    text-align: center;
+    color: #FFF;
+    text-align: left;
 }
 .contenedor{
     width: 90%;
@@ -46,42 +46,18 @@ header nav a.activo{
     color: #FFF;
 }
 
-  .programas{
-    display: grid;
-    grid-template-rows: 200px 200px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 3%;
-    padding: 5%;
-  }
-  .imagenPeliculas{
-    width: 100%;
-    height: 100%;
-  }
-  header{
-    display: grid;
-    grid-template-rows: 50px;
-    grid-gap: 5%;
-  }
-  .item{
-    padding: 15px;
-    width: 150px;
-
+.cont .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
+    background-color: rgba(170, 170, 170, 0.393);
+    padding: 100px;
+    margin: 0px;
+    border-radius: 100px;
 }
 
-  
-  ul{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    list-style: none;
-    align-items: center;
-    justify-content: center;
-  
-  }
-  li{
-    display: grid;
-    align-items: center;
-    justify-content: center;
-  }
 
 @media screen and (max-width: 800px){
     header .logo{
@@ -91,6 +67,7 @@ header nav a.activo{
     header .contenedor{
         flex-direction: block;
         text-align: center;
+        display: block;
     }
     
     .pelicula-principal{
@@ -99,9 +76,23 @@ header nav a.activo{
     
     .pelicula-principal .descripcion{
         max-width: 100%;
+        text-align: left;
     }
-    
-    
-}
+        
     
 
+    
+}
+
+
+main .item{
+    margin-top: 0px;
+}
+.main-serie{
+    background-image: url("../img/Peaky\ Blinders\ Grande.jfif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    
+}
