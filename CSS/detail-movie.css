@@ -9,6 +9,11 @@ body{
     font-family: 'Open Sans', sans-serif;
 
 }
+main .cont{
+    color: #FFF;
+    text-align: left;
+    
+}
 
 .contenedor{
     width: 90%;
@@ -66,15 +71,22 @@ header nav a.activo{
     }
 }
 
-
-.pelicula-principal .descripcion{
-    max-width: 100%;
+.cont .item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
+    background-color: rgba(170, 170, 170, 0.393);
+    padding: 100px;
+    margin: 0px;
+    border-radius: 100px;
 }
-main{
+.main-movie{
     background-image: url("../img/Thor\ grande.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: 100vh;
-    
+    align-self: start;
 }
