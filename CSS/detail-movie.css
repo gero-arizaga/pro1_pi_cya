@@ -5,7 +5,9 @@
 }
 
 body{
-    background-color: black;
+    background: #373B44; 
+    background: -webkit-linear-gradient(to right, #4286f4, #373B44);  
+    background: linear-gradient(to right, #4286f4, #373B44); 
     font-family: 'Open Sans', sans-serif;
 
 }
@@ -41,11 +43,14 @@ header nav a{
     color: #AAA;
     text-decoration: none;
     margin-right: 20px;
+    padding: 5px;
 }
 
 header nav a:hover,
 header nav a.activo{
     color: #FFF;
+    background-color: rgba(25, 25, 48, 0.274);
+    border-radius: 100px;
 }
 
 
