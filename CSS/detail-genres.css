@@ -5,7 +5,9 @@
 }
 
 body{
-    background-color: black;
+    background: #373B44; 
+    background: -webkit-linear-gradient(to right, #4286f4, #373B44);  
+    background: linear-gradient(to right, #4286f4, #373B44);
     font-family: 'Open Sans', sans-serif;
 
 }
@@ -73,18 +75,17 @@ header nav a.activo{
 .item{
     padding: 15px;
     width: 150px;
+    transition: all 300ms;
+}
+.item:hover{
+    transform: scale(1.15);
 }
 img{
     width: 200px;
     border-radius: 30px;
-    transition: all 300ms;
+    
 }
-.item a {
-    width: 100%;
-}
-.item a img:hover{
-    transform: scale(1.15);
-}
+
 p{
     color: white;
     text-align: start;
@@ -95,7 +96,9 @@ p{
     color: white ;
     padding: 35px;
 }
-
+h3{
+    color: white;
+}
 .cont{
     display:  flex;
     justify-content: space-around;
@@ -126,13 +129,9 @@ footer{
     }
     .cont{
         display: block;
-        justify-content: space-around;
-        align-items: center;
-        height: 650px;
-        width: 96%;
+        height: auto;
 
     }
-    
     header .contenedor {
     flex-direction: column;
     text-align: center;

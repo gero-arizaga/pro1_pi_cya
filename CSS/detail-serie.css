@@ -50,7 +50,10 @@ header nav a.activo{
     background-color: rgba(25, 25, 48, 0.274);
     border-radius: 100px;
 }
-
+.genero-en-detail{
+    color: white;
+    text-decoration: none;
+}
 .cont-serie .item {
     display: flex;
     flex-direction: column;
@@ -63,7 +66,23 @@ header nav a.activo{
     border-radius: 100px;
     
 }
+.boton{
+    background:  rgba(28, 127, 51, 0.288);
+    border: none;
+    border-radius: 15px;
+    padding: 15px 30px;
+    color: white;
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 18px;
 
+}
+.boton:hover{
+    background-color:blue;
+}
+.boton i{
+    margin-right: 20px;
+}
 
 @media screen and (max-width: 800px){
     header .logo{
