@@ -165,9 +165,9 @@ p{
 }
 /* footer */
 footer{
-    background-color: black;
+    
     font-family: 'Open Sans', sans-serif;
-    color: white;
+    color: black;
     font-size: 15px;
     display: flex;
     flex-wrap: wrap;
