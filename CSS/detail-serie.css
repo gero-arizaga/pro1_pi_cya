@@ -114,6 +114,7 @@ header nav a.activo{
     align-items: center;
     padding: 100px;
     margin: 10px;
+    font-family: 'Open Sans', sans-serif;
 }
 .main-serie{
     background-image: url("../img/Peaky\ Blinders\ Grande.jfif");
