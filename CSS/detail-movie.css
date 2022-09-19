@@ -11,6 +11,24 @@ body{
     font-family: 'Open Sans', sans-serif;
 
 }
+ .boton{
+    background:  rgba(28, 127, 51, 0.288);
+    border: none;
+    border-radius: 15px;
+    padding: 15px 30px;
+    color: white;
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 18px;
+
+}
+.boton:hover{
+    background-color:blue;
+}
+.boton i{
+    margin-right: 20px;
+}
+
 main .cont{
     color: #FFF;
     text-align: left;
@@ -38,7 +56,10 @@ header .logotipo{
     color: blue;
     font-size: 40px;
 }
-
+.genero-en-detail{
+    color: white;
+    text-decoration: none;
+}
 header nav a{
     color: #AAA;
     text-decoration: none;
