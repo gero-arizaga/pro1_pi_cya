@@ -111,9 +111,12 @@ align-items: flex-end;
     width: 150px;
 }
 img{
-    width: 200px
+    width: 200px;
+    border-radius: 30px;
 }
-
+.item a{
+    width: 100%;
+}
 p{
     color: white;
     text-align: start;
@@ -131,7 +134,9 @@ p{
     height: 650px;
     
 }
-
+.subtitulos{
+    color: white;
+}
 /* footer */
 footer{
     background-color: black;

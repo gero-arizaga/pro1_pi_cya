@@ -77,7 +77,8 @@ header .contenedor {
     width: 150px;
 }
 img{
-    width: 200px
+    width: 200px;
+    border-radius: 30px;
 }
 
 p{
@@ -98,6 +99,12 @@ p{
     height: 650px;
     width: 96%;
     
+}
+a .imagenes :hover{
+    
+}
+.subtitulos{
+    color: white;
 }
 
 /* footer */

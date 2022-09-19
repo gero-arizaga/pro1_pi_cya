@@ -72,7 +72,8 @@ header nav a.activo{
     width: 150px;
 }
 img{
-    width: 200px
+    width: 200px;
+    border-radius: 30px;
 }
 
 p{
@@ -94,7 +95,9 @@ p{
     width: 96%;
     
 }
-
+.subtitulos{
+    color: white;
+}
 /* footer */
 footer{
     background-color: black;
