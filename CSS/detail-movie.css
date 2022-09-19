@@ -82,6 +82,13 @@ header nav a.activo{
     margin: 0px;
     border-radius: 100px;
 }
+.cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    margin: 10px;
+}
 .main-movie{
     background-image: url("../img/Thor\ grande.jpg");
     background-repeat: no-repeat;

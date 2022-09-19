@@ -9,7 +9,7 @@ body{
     font-family: 'Open Sans', sans-serif;
 
 }
-main .cont{
+.cont-serie{
     color: #FFF;
     text-align: left;
 }
@@ -46,16 +46,17 @@ header nav a.activo{
     color: #FFF;
 }
 
-.cont .item {
+.cont-serie .item {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     align-self: center;
     background-color: rgba(170, 170, 170, 0.393);
     padding: 100px;
     margin: 0px;
     border-radius: 100px;
+    
 }
 
 
@@ -83,10 +84,12 @@ header nav a.activo{
 
     
 }
-
-
-main .item{
-    margin-top: 0px;
+.cont-serie{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    margin: 10px;
 }
 .main-serie{
     background-image: url("../img/Peaky\ Blinders\ Grande.jfif");
