@@ -11,6 +11,11 @@ body{
     font-family: 'Open Sans', sans-serif;
 
 }
+header .logop{
+    height: 50px;
+    width: 49px;
+}
+
  .boton{
     background:  rgba(28, 127, 51, 0.288);
     border: none;

@@ -66,6 +66,10 @@ header nav a.activo{
     border-radius: 100px;
     
 }
+header .logop{
+    height: 50px;
+    width: 49px;
+}
 .boton{
     background:  rgba(28, 127, 51, 0.288);
     border: none;
