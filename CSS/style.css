@@ -4,24 +4,17 @@
     box-sizing: border-box;
 }
 
-body{
-    background: #373B44; 
-    background: -webkit-linear-gradient(to right, #4286f4, #373B44);  
-    background: linear-gradient(to right, #4286f4, #373B44); 
-    font-family: 'Open Sans', sans-serif;
+/* HEADER*/
 
+header .contenedor-h-index{
+    flex-direction: column;
+    text-align: center;
 }
-
-.contenedor{
-    width: 90%;
-    margin: auto;
-}
-
 header{
     padding: 30px 0;
 }
 
-header .contenedor{
+header .contenedor-h-index{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,6 +30,7 @@ header .logotipo{
 header .logop{
     height: 50px;
     width: 49px;
+    border-radius: 0%;
 }
 
 header nav a{
@@ -54,10 +48,25 @@ header nav a.activo{
     border-radius: 100px;
 }
 
-/*------- pelicula principal ----*/
+/*BODY/MAIN*/
+
+body{
+    background: #373B44; 
+    background: -webkit-linear-gradient(to right, #4286f4, #373B44);  
+    background: linear-gradient(to right, #4286f4, #373B44); 
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+/*------- pelicula principal (index) ----*/
+
+.contenedor-dune{
+    width: 90%;
+    margin: auto;
+}
 
 .pelicula-principal{
-font-size: 16px;
+font-size: 14px;
 min-height: 40.63em;
 color: #FFF;
 background:  url(https://www.top10listas.com/archivos/listas/blog_articulos-1609967482.jpg);
@@ -79,7 +88,7 @@ align-items: flex-end;
     font-weight: normal;
     font-size: 1em;
     line-height: 1.75;
-    max-width: 50%;
+    max-width: 100%;
     margin-bottom: 1.25em;
 }
 
@@ -97,24 +106,23 @@ align-items: flex-end;
 .pelicula-principal .boton:hover{
     background-color:blue;
 }
-.pelicula-principal .boton i{
-    margin-right: 20px;
+
+/*BODY, SELECCIÓN DE PELÍCULAS y SERIES*/
+
+.contenedor-cartelera{
+    width: 90%;
+    margin: auto;
 }
-
-
-    
-
-.peliculas-populares{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+.cont-listas{
+    display:  flex;
+    justify-content: space-around;
     align-items: center;
-    margin-bottom: 3.12em;
-    width: 1330px;
-    height: 40px;
-    font-size: 50px;
-    background-color: cornsilk;
-
+    height: 650px;
+    width: 96%;  
+}
+.titulos{
+    color: white ;
+    padding: 35px;
 }
 
 .item{
@@ -126,12 +134,9 @@ align-items: flex-end;
     transform: scale(1.15);
 }
 img{
-    width: 98px;
+    width: 200px;
     border-radius: 30px;
-
 }
-
-
 h3{
     color: white;
   }
@@ -142,20 +147,8 @@ p{
     font-family:'Open Sans', sans-serif; 
 }
 
-.titulos{
-    color: white ;
-}
+/*RESULTADOS DE BUSQUEDA HTML*/
 
-.cont{
-    display:  flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 650px;
-    
-}
-.subtitulos{
-    color: white;
-}
 .resultado-busqueda{
     display: flex;
     flex-direction: column;
@@ -168,6 +161,19 @@ p{
     border-radius: 100px;
     color: white;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* footer */
 footer{
     
@@ -187,25 +193,13 @@ footer{
         margin-bottom: 20px;
         font-size: 50px;
     }
-    .cont{
+    .cont-listas{
         display: block;
         height: auto;
 
     }
 }
     
-header .contenedor{
-    flex-direction: column;
-    text-align: center;
-}
-
-.pelicula-principal{
-    font-size: 14px;
-}
-
-.pelicula-principal .descripcion{
-    max-width: 100%;
-}
 
 
 
