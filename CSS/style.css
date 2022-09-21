@@ -204,17 +204,86 @@ p{
     margin: 0px;
 }
 
+/*GÉNEROS DETAIL HTML*/
 
+.contenedor-agregados-recientemente {
+    width: 90%;
+    margin: auto;
+}
 
+/*FAVORITOS*/
 
+.contenedor-generos{
+    width: 90%;
+    margin: auto;
+}
 
+/*SERIES Y PELICULAS (DETAIL)*/
 
+.main-serie{
+    background-image: url("../img/Peaky\ Blinders\ Grande.jfif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;    
+}
 
+.main-movie{
+    background-image: url("../img/Thor\ grande.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
 
+.cont-detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    margin: 10px;
+    font-family: 'Open Sans', sans-serif;
+    color: #FFF;
+    text-align: left;
+}
 
+.cont-detail .item-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    background-color: rgba(170, 170, 170, 0.393);
+    padding: 100px;
+    margin: 0px;
+    border-radius: 100px;
+}
 
+.genero-en-detail{
+    color: white;
+    text-decoration: none;
+}
+
+.boton-fav{
+    background:  rgba(28, 127, 51, 0.288);
+    border: none;
+    border-radius: 15px;
+    padding: 15px 30px;
+    color: white;
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 18px;
+
+}
+.boton-fav:hover{
+    background-color:blue;
+}
+.boton-fav i{
+    margin-right: 20px;
+}
 
 /* footer */
+
 footer{
     
     font-family: 'Open Sans', sans-serif;

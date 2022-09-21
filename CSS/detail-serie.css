@@ -11,10 +11,7 @@ body{
     font-family: 'Open Sans', sans-serif;
 
 }
-.cont-serie{
-    color: #FFF;
-    text-align: left;
-}
+
 .contenedor{
     width: 90%;
     margin: auto;
@@ -54,7 +51,7 @@ header nav a.activo{
     color: white;
     text-decoration: none;
 }
-.cont-serie .item {
+.cont-detail .item-detail {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,7 +67,7 @@ header .logop{
     height: 50px;
     width: 49px;
 }
-.boton{
+.boton-fav{
     background:  rgba(28, 127, 51, 0.288);
     border: none;
     border-radius: 15px;
@@ -81,10 +78,10 @@ header .logop{
     font-size: 18px;
 
 }
-.boton:hover{
+.boton-fav:hover{
     background-color:blue;
 }
-.boton i{
+.boton-fav i{
     margin-right: 20px;
 }
 
@@ -112,13 +109,15 @@ header .logop{
 
     
 }
-.cont-serie{
+.cont-detail{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 100px;
     margin: 10px;
     font-family: 'Open Sans', sans-serif;
+    color: #FFF;
+    text-align: left;
 }
 .main-serie{
     background-image: url("../img/Peaky\ Blinders\ Grande.jfif");
@@ -127,4 +126,20 @@ header .logop{
     background-size: cover;
     height: 100vh;
     
+}
+.cont-detail .item-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    background-color: rgba(170, 170, 170, 0.393);
+    padding: 100px;
+    margin: 0px;
+    border-radius: 100px;
+    
+}
+.genero-en-detail{
+    color: white;
+    text-decoration: none;
 }

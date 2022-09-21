@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Detalle de Pelicula </title>
-    <link rel="stylesheet" href="./CSS/detail-movie.css">
+    <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
     <header>
-        <div class="contenedor">
+        <div class="contenedor-h-index">
             <h2 class="logotipo"> <img class="logop" src="./img/Logo Pelis Play.png" alt="pe"></h2>
             <nav>
-            <a href="./index.html"> Inicio</a>
-            <a href="./detail-movie.html" class="activo"> Peliculas</a>
-            <a href="./detail-serie.html"> Series</a>
-            <a href="./genres.html"> Generos </a>
-            <a href="./favorite.html"> Favoritos </a>
-             </nav>
-             <article>
+                <a href="./index.html"> Inicio</a>
+                <a href="./detail-movie.html" class="activo"> Peliculas</a>
+                <a href="./detail-serie.html"> Series</a>
+                <a href="./genres.html"> Generos </a>
+                <a href="./favorite.html"> Favoritos </a>
+            </nav>
+            <article>
                 <form action="search-results.html" method="get">
                     <div>
                         <input type="text" name="busqueda"placeholder="Buscar">
@@ -28,23 +28,18 @@
                         <button type="submit">Buscar</button>
                     </div>
                 </form>
-             </article>
-         </div>
-        </header>
-
-         
-    <main class="main-movie">
-        
-        <section class="cont">
-            <article class="item">
+            </article>
+        </div>
+    </header>
+    <main class="main-movie">        
+        <section class="cont-detail">
+            <article class="item-detail">
                 <h3 class="subtitulos">Thor Love And Thunder</h3>
                 <p>Estreno: 7 de Agosto de 2022</p>
                 <a class="genero-en-detail" href="./detail-genres.html"><p>Accion, Aventura</p></a>
                 <p>El Dios del Trueno emprende un viaje completamente nuevo en búsqueda de la paz interior. Pero el retiro de Thor se ve interrumpido por Gorr el Carnicero de Dioses. Para hacer frente a la amenaza, Thor solicita la ayuda de Valkiria, de Korg y de su ex novia Jane Foster, como la Poderosa Thor. Juntos, se embarcan en una nueva aventura cósmica.</p>
-<br>
-                <button role="button" class="boton"><i class="fas fa-play"></i>❤ Agregar a Favoritos</button>
-                </article>        
-
+                <button role="button" class="boton-fav"><i class="fas fa-play"></i>❤ Agregar a Favoritos</button>
+            </article>        
         </section>
     </main>
     <footer>
@@ -52,7 +47,6 @@
             <a href="#"></a>
         </p>
         <h4><strong> Arizaga Geronimo, Chaiman Tomas & Yukelson Isabella </strong></h4>
-    </footer>
-    
+    </footer>    
 </body>
 </html>
