@@ -20,13 +20,7 @@ header .contenedor-h-index{
     align-items: center;
 }
 
-header .logotipo{
-    font-family: 'Bebas Neue';
-    font-weight: normal;
-    color: blue;
-    font-size: 40px;
 
-}
 header .logop{
     height: 50px;
     width: 49px;
