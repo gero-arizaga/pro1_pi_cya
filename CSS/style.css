@@ -107,7 +107,21 @@ align-items: flex-end;
     width: 90%;
     margin: auto;
 }
-.cont-listas{
+.cont-listas_series{
+    display:  flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 650px;
+    width: 96%;  
+}
+.cont-listas_pelis{
+    display:  flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 650px;
+    width: 96%;  
+}
+.cont-listas_latest{
     display:  flex;
     justify-content: space-around;
     align-items: center;
@@ -133,6 +147,7 @@ img{
 }
 h3{
     color: white;
+    
   }
 
 p{
