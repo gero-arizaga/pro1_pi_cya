@@ -147,7 +147,7 @@ img{
 }
 h3{
     color: white;
-    
+
   }
 
 p{
@@ -230,7 +230,7 @@ p{
 /*SERIES Y PELICULAS (DETAIL)*/
 
 .main-serie{
-    background-image: url("../img/Peaky\ Blinders\ Grande.jfif");
+    background-color: blue;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -238,7 +238,7 @@ p{
 }
 
 .main-movie{
-    background-image: url("../img/Thor\ grande.jpg");
+    background-color: blue;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
