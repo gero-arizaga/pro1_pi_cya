@@ -93,11 +93,7 @@ fetch(url_series)
 });
 
 
-// como agrego este evento  al .then d arriba? 
-window.addEventListener("load", function () {
-    let api_key = '81faef6942a31915ed87b416fbba64ba'
-    let url_latest  = `https://api.themoviedb.org/3/movie/upcoming?api_key=${api_key}&language=en-US&page=1`;   
-     // agregados recientemente 
+
         
         
 
