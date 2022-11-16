@@ -52,55 +52,12 @@ body{
 
 }
 
-/*------- pelicula principal (index) ----*/
 
-.contenedor-dune{
-    width: 90%;
-    margin: auto;
-}
 
-.pelicula-principal{
-font-size: 14px;
-min-height: 40.63em;
-color: #FFF;
-background:  url(https://i.pinimg.com/736x/3d/43/1b/3d431bf357ac4e69c09b17fb1d8f68d6.jpg);
-background-repeat: no-repeat;
-background-position: center center;
-background-size: cover;
-margin-bottom: 3.12em;
-display: flex;
-align-items: flex-end;
-}
-
-.pelicula-principal .titulo{
-    font-weight: 600;
-    font-size: 3.12em;
-    margin-bottom: 0.4em;
-}
-
-.pelicula-principal .descripcion{
-    font-weight: normal;
-    font-size: 1em;
-    line-height: 1.75;
-    max-width: 100%;
-    margin-bottom: 1.25em;
-}
-
-.pelicula-principal .boton{
-    background:  rgba(0,0,0, 0.5);
-    border: none;
-    border-radius: 15px;
-    padding: 15px 30px;
+.ver_mas{
     color: white;
-    margin-right: 20px;
-    cursor: pointer;
-    font-size: 18px;
-
+    text-decoration: none;
 }
-.pelicula-principal .boton:hover{
-    background-color:blue;
-}
-
 /*BODY, SELECCIÓN DE PELÍCULAS y SERIES*/
 
 .contenedor-cartelera{
@@ -131,6 +88,7 @@ align-items: flex-end;
 .titulos{
     color: white ;
     padding: 35px;
+    text-decoration: none;
 }
 
 .item{
@@ -148,12 +106,14 @@ img{
 h3{
     color: white;
 
+
   }
 
 p{
     color: white;
     text-align: start;
     font-family:'Open Sans', sans-serif; 
+    text-decoration: none;
 }
 
 /*RESULTADOS DE BUSQUEDA HTML*/
