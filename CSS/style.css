@@ -263,6 +263,11 @@ footer{
     flex-direction: row;
     justify-content: space-between;
 }
+footer .dataBase img {
+    width: 30%;
+    padding-bottom: 20px;
+}
+
 
 /* medida queries */
 
