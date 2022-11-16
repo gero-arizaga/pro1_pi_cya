@@ -5,7 +5,7 @@ let searchBaseUrl = ""
 
 let searchBar = document.getElementById("searchBar");
 function runSearch(keyword) {
-  let url = "".$(searchBaseUrl, apiKey, "&query=", keyword)
+  let url = "".$(searchBaseUrl, api_key, "&query=", keyword)
   document.getElementById("results-list").innerHTML = "";
   fetch(url)
     .then(result => result.json())
@@ -28,4 +28,6 @@ function runSearch(keyword) {
     
     })
 }
+
+
 

@@ -84,8 +84,6 @@ fetch(url_series)
     }
 
 
-
-
     return data;
 }).catch(function(error) {
     console.log(error);
