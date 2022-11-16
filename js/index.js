@@ -1,3 +1,6 @@
+ //head
+
+
 let api_key = '81faef6942a31915ed87b416fbba64ba'
 let url_popu  = `https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&language=en-US&page=1`;
 let url_latest  = `https://api.themoviedb.org/3/movie/upcoming?api_key=${api_key}&language=en-US&page=1`;
@@ -29,6 +32,8 @@ fetch(url_popu)
     console.log(error);
     return error;
 });
+
+
 
 
 
