@@ -17,8 +17,8 @@ fetch(url)
         let descripcion_serie = document.querySelector('.descripcion_serie');
         let imagen = document.querySelector('.item-detail');
 
-        subtitulos.innerText += `${data.title}`
-        fecha_estreno.innerText += `${data.release_date}`
+        subtitulos.innerText += `${data.name}`
+        fecha_estreno.innerText += `${data.first_air_date}`
         genero_series.innerText += `${data.genres[0].name}`
         descripcion_serie.innerText += `${data.overview}`
         imagen.innerHTML += `<img src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt="">`

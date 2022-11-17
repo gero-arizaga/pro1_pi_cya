@@ -190,7 +190,7 @@ p{
 /*SERIES Y PELICULAS (DETAIL)*/
 
 .main-serie{
-    background-color: blue;
+    background-color: linear-gradient(to right, #4286f4, #373B44);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -198,7 +198,7 @@ p{
 }
 
 .main-movie{
-    background-color: blue;
+    background-color: linear-gradient(to right, #4286f4, #373B44);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
