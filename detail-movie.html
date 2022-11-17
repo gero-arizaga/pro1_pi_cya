@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <title>Detalle de Pelicula </title>
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
+
 <body>
     <header>
         <div class="contenedor-h-index">
@@ -22,7 +24,7 @@
             <article>
                 <form action="search-results.html" method="get">
                     <div>
-                        <input type="text" name="busqueda"placeholder="Buscar">
+                        <input type="text" name="busqueda" placeholder="Buscar">
                     </div>
                     <div>
                         <button type="submit">Buscar</button>
@@ -31,15 +33,18 @@
             </article>
         </div>
     </header>
-    <main class="main-movie">        
+    <main class="main-movie">
         <section class="cont-detail">
             <article class="item-detail">
                 <h3 class="subtitulos"></h3>
-                <a class="genero-en-detail" href="./detail-genres.html"><p class="genero_pelicula"></p></a>
+                <p class="fecha-estreno"></p>
+                <a class="genero-en-detail" href="./detail-genres.html">
+                    <p class="genero_pelicula"></p>
+                </a>
                 <p class="descripcion_peli"></p>
                 <br>
                 <button role="button" class="boton-fav"><i class="fas fa-play"></i>❤ Agregar a Favoritos</button>
-            </article>        
+            </article>
         </section>
     </main>
     <footer>
@@ -47,6 +52,8 @@
             <a href="#"></a>
         </p>
         <h4><strong> Arizaga Geronimo, Chaiman Tomas & Yukelson Isabella </strong></h4>
-    </footer>    
+    </footer>
+    <script src="./js/detail-movie.js"></script>
 </body>
+
 </html>
