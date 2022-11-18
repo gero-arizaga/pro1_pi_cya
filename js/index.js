@@ -77,8 +77,8 @@ fetch(url_series)
         let series = data.results[i];
         listaSeries.innerHTML += `<article class="item">
         <a href="./detail-movie.html"> <img class="imagenes" src="https://image.tmdb.org/t/p/w500/${series.poster_path}" alt=""></a>
-                                        <h3>${series.title}</h3>
-                                        <p>${series.release_date}</p>
+                                        <h3>${series.name}</h3>
+                                        <p>${series.first_air_date}</p>
                                         <a href="./detail-movie.html?idPelicula=${series.id}">Ver mas</a>
                                     </article>` 
     }
