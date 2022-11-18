@@ -16,6 +16,7 @@ fetch(url)
         let genero_pelicula = document.querySelector('.genero_pelicula');
         let descripcion_peli = document.querySelector('.descripcion_peli');
         let imagen = document.querySelector('.item-detail');
+        let duracion = document.querySelector('')
 
         subtitulos.innerText += `${data.title}`
         fecha_estreno.innerText += `${data.release_date}`
