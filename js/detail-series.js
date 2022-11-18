@@ -1,9 +1,10 @@
+
 let algo = new URLSearchParams(this.location.search)
 let id_serie = algo.get("q")
 console.log(id_serie)
 
 const api_key = '81faef6942a31915ed87b416fbba64ba'
-let url = `https://api.themoviedb.org/3/tv/${id_serie}?api_key=${api_key}&language=en-US`
+let url = `https://api.themoviedb.org/3/tv/top_rated${id_serie}?api_key=${api_key}&language=en-US&page=1`
 
 fetch(url)
     .then(function (respuesta) {

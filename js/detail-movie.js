@@ -1,3 +1,4 @@
+
 let algo = new URLSearchParams(this.location.search)
 let id_pelicula = algo.get("q")
 console.log(id_pelicula)
