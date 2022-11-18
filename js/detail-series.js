@@ -49,14 +49,22 @@ fetch(url)
         let fecha_estreno = document.querySelector('.fecha-estreno');
         let genero_series = document.querySelector('.genero_serie');
         let descripcion_serie = document.querySelector('.descripcion_serie');
-        let imagen = document.querySelector('.item-detail');
+        //let imagen = document.querySelector('.item-detail');
+        let imagen = document.querySelector('#img');
+        let vote = document.querySelector('.vote');
+        let time = document.querySelector('.time');
+
+
         
         subtitulos.innerText += `${ data.name }`
         fecha_estreno.innerText += `${ data.first_air_date } `
         genero_series.innerText += `${ data.genres[0].name } `
         descripcion_serie.innerText += `${ data.overview } `
         imagen.innerHTML += `< img src = "https://image.tmdb.org/t/p/w500/${data.poster_path}" alt = "" > `
-        
+        vote.innerText += `${data.vote_average}`
+        time.innerText += `${data.runtime}`
+
+
     })
     .catch(function (error) {
         console.log(error);
