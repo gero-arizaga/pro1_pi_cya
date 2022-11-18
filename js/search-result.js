@@ -31,6 +31,7 @@ function runSearch (keyword) {
         let resultTitle = document.getElementById("results-title")
         resultTitle.innerHTML = "No search results found";
     }
+})}
     
 let url = ``;
     
