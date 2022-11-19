@@ -70,3 +70,11 @@ fetch(url)
         console.log(error);
     })
 
+    // boton de ver series similares 
+   
+    let botonSimil = document.getElementById(".botonSimil");
+    window.onclick = function(event) {
+         if (event.target == botonSimil) {
+             botonSimil.style.display = "none";
+         }
+     }

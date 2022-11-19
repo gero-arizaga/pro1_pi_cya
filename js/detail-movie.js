@@ -36,4 +36,16 @@ fetch(url)
         console.log(error);
     })
 
+ //boton ver  pelis similares 
+
+ let botonSimil = document.getElementById(".botonSimil");
+window.onclick = function(event) {
+     if (event.target == botonSimil) {
+         botonSimil.style.display = "none";
+     }
+ }
  
+
+
+
+
