@@ -36,7 +36,7 @@ fetch(url)
         console.log(error);
     })
 
- //boton ver  pelis similares 
+ //boton ver  pelis similares  -- chequear codigo
 
  let botonSimil = document.getElementById(".botonSimil");
 window.onclick = function(event) {
@@ -44,8 +44,23 @@ window.onclick = function(event) {
          botonSimil.style.display = "none";
      }
  }
- 
 
 
 
+ // titulos  similares -- chequear codigo
+
+let Newurl = `https://api.themoviedb.org/3/movie/${movie_id}/alternative_titles?api_key${api_key}`
+
+fetch(url)
+    .then(function (respuesta) {
+        return respuesta.json();
+    })
+    .then(function (data) {
+        console.log(data);
+       
+        // completar 
+    })
+    .catch(function (error) {
+        console.log(error);
+    })
 
