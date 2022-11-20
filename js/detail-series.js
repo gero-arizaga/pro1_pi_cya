@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 //BOTÓN PARA FAVORITOS
 let qs = location.search;
 let qsObj = new URLSearchParams(qs);
@@ -32,52 +32,45 @@ boton.addEventListener("click",function (e) {
 });
 
 
+
+
 let algo = new URLSearchParams(this.location.search)
 let tv_id = algo.get("s")
-=======
-
-let alg = new URLSearchParams(this.location.search)
-let tv_id = alg.get("q")
->>>>>>> 7d37ad4 (erorres)
 console.log(tv_id)
 
 const api_key = '81faef6942a31915ed87b416fbba64ba'
-let url = `https://api.themoviedb.org/3/tv/${tv_id}?api_key=${api_key}&language=en-US&page=1`
+let Url = `https://api.themoviedb.org/3/tv/${tv_id}?api_key=${api_key}&language=en-US&page=1`
 
 
 let subtitulos = document.querySelector('.subtitulos');
 let fecha_estreno = document.querySelector('.fecha-estreno');
 let genero_series = document.querySelector('.genero_serie');
 let descripcion_serie = document.querySelector('.descripcion_serie');
-//let imagen = document.querySelector('.item-detail');
 let imagen = document.querySelector('#img');
 let vote = document.querySelector('.vote');
 let time = document.querySelector('.time');
 
-<<<<<<< HEAD
-=======
+
 //let url = `https://api.themoviedb.org/3/tv/top_rated${tv_id}?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US&page=1`
 let url = `https://api.themoviedb.org/3/tv/${tv_id}?api_key=${api_key}&language=en-US&page=1`
->>>>>>> 7d37ad4 (erorres)
+
 
 fetch(url)
     .then(function (respuesta) {
         return respuesta.json();
     })
     .then(function (data) {
-<<<<<<< HEAD
-=======
-
-        let subtitulos = document.querySelector('.subtitulos');
-        let fecha_estreno = document.querySelector('.fecha-estreno');
-        let genero_series = document.querySelector('.genero_serie');
-        let descripcion_serie = document.querySelector('.descripcion_serie');
-        let imagen = document.querySelector('#img');
-        let vote = document.querySelector('.vote');
-        let time = document.querySelector('.time');
 
 
->>>>>>> 7d37ad4 (erorres)
+         let subtitulos = document.querySelector('.subtitulos');
+         let fecha_estreno = document.querySelector('.fecha-estreno');
+         let genero_series = document.querySelector('.genero_serie');
+         let descripcion_serie = document.querySelector('.descripcion_serie');
+         let imagen = document.querySelector('#img');
+         let vote = document.querySelector('.vote');
+         let time = document.querySelector('.time');
+
+
         
         subtitulos.innerText = `${ data.name }`
         fecha_estreno.innerText = `${ data.first_air_date } `
