@@ -79,20 +79,26 @@ window.onclick = function(event) {
 
 
 
- // titulos  similares -- chequear codigo
+ // ver titulos  similares -- chequear codigo
 
+<<<<<<< HEAD
 //let Newurl = `https://api.themoviedb.org/3/movie/${movie_id}/alternative_titles?api_key${api_key}`
+=======
+let urlreco = `https://api.themoviedb.org/3/movie/${movie_id}/recommendations?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US&page=1`
+let btn = document.querySelector('.botonSimil');
+>>>>>>> 7d37ad4 (erorres)
 
-fetch(url)
+fetch(urlreco)
     .then(function (respuesta) {
         return respuesta.json();
     })
     .then(function (data) {
         console.log(data);
-       
-        // completar 
+         return data;
+        
     })
     .catch(function (error) {
         console.log(error);
+        return error;
     })
 
