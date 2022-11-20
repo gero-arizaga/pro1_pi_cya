@@ -20,14 +20,14 @@ boton.addEventListener("click",function (e) {
     if(favoritos_p.includes(id)){
         let indice = favoritos_p.indexOf(id);
         favoritos_p.splice(indice,1);
-        boton.innerText="Agregar a Favorito";
+        boton.innerText="❤ Agregar a Favorito";
     }else{
         favoritos_p.push(id);
         boton.innerText="Quitar de Favorito";
     }
     let favToString = JSON.stringify(favoritos_p);
     localStorage.setItem('favoritos_p',favToString)
-    
+
 });
 
 
@@ -81,12 +81,9 @@ window.onclick = function(event) {
 
  // ver titulos  similares -- chequear codigo
 
-<<<<<<< HEAD
 //let Newurl = `https://api.themoviedb.org/3/movie/${movie_id}/alternative_titles?api_key${api_key}`
-=======
 let urlreco = `https://api.themoviedb.org/3/movie/${movie_id}/recommendations?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US&page=1`
 let btn = document.querySelector('.botonSimil');
->>>>>>> 7d37ad4 (erorres)
 
 fetch(urlreco)
     .then(function (respuesta) {
@@ -102,3 +99,4 @@ fetch(urlreco)
         return error;
     })
 
+console.log(favoritos_p)
