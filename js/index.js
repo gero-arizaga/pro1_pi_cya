@@ -18,10 +18,10 @@ fetch(url_popu)
         
         let popular = data.results[i];
         listaPeli.innerHTML += `<article class="item">
-        <a href="./detail-movie.html?q=${popular.id}"> <img class="imagenes" src="https://image.tmdb.org/t/p/w500/${popular.poster_path}" alt=""></a>
-                                <a href="./detail-movie.html?q=${popular.id}"><h3>${popular.title}</h3></a>
-                                <a href="./detail-movie.html?q=${popular.id}"><p>${popular.release_date}</p></a>
-                                <a href="./detail-movie.html?q=${popular.id}" class="ver_mas">Ver mas</a>
+        <a href="./detail-movie.html?p=${popular.id}"> <img class="imagenes" src="https://image.tmdb.org/t/p/w500/${popular.poster_path}" alt=""></a>
+                                <a href="./detail-movie.html?p=${popular.id}"><h3>${popular.title}</h3></a>
+                                <a href="./detail-movie.html?p=${popular.id}"><p>${popular.release_date}</p></a>
+                                <a href="./detail-movie.html?p=${popular.id}" class="ver_mas">Ver mas</a>
                                     </article>` 
     }
 
@@ -51,10 +51,10 @@ fetch(url_latest)
         
         let latest = data.results[i];
         listaLatest.innerHTML += `<article class="item">
-        <a href="./detail-movie.html?idPelicula=${latest.id}"> <img class="imagenes" src="https://image.tmdb.org/t/p/w500/${latest.poster_path}" alt=""></a>
-                                        <a href="./detail-movie.html?idPelicula=${latest.id}"<h3>${latest.title}</h3> </a>
-                                        <a href="./detail-movie.html?idPelicula=${latest.id}"<p>${latest.release_date}</p> </a>
-                                        <a href="./detail-movie.html?idPelicula=${latest.id}">Ver mas </a>
+        <a href="./detail-movie.html?p=${latest.id}"> <img class="imagenes" src="https://image.tmdb.org/t/p/w500/${latest.poster_path}" alt=""></a>
+                                        <a href="./detail-movie.html?p=${latest.id}"<h3>${latest.title}</h3> </a>
+                                        <a href="./detail-movie.html?p=${latest.id}"<p>${latest.release_date}</p> </a>
+                                        <a href="./detail-movie.html?p=${latest.id}">Ver mas </a>
                                     </article>` 
     }
 
@@ -76,10 +76,10 @@ fetch(url_series)
         
         let series = data.results[i];
         listaSeries.innerHTML += `<article class="item">
-        <a href="./detail-serie.html?idPelicula=${series.id}"> <img class="imagenes" src="https://image.tmdb.org/t/p/w500/${series.poster_path}" alt=""></a>
-                                        <a href="./detail-serie.html?idPelicula=${series.id}"<h3>${series.name}</h3> </a>
-                                        <a href="./detail-serie.html?idPelicula=${series.id}"<p>${series.first_air_date}</p> </a>
-                                        <a href="./detail-serie.html?idPelicula=${series.id}">Ver mas</a>
+        <a href="./detail-serie.html?s=${series.id}"> <img class="imagenes" src="https://image.tmdb.org/t/p/w500/${series.poster_path}" alt=""></a>
+                                        <a href="./detail-serie.html?s=${series.id}"<h3>${series.name}</h3> </a>
+                                        <a href="./detail-serie.html?s=${series.id}"<p>${series.first_air_date}</p> </a>
+                                        <a href="./detail-serie.html?s=${series.id}">Ver mas</a>
                                     </article>` 
     }
 

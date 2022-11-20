@@ -1,6 +1,38 @@
+//BOTÓN PARA FAVORITOS
+let qs = location.search;
+let qsObj = new URLSearchParams(qs);
+let idmovie = qsObj.get ('idmovie');
+let id = idmovie;
+let boton = document.querySelector ('.boton-fav');
+let favoritos_p = [];
+let recuperoStorage = localStorage.getItem('favoritos_p');
+
+/* Preguntamos si es distinto de nulo-  es verdarero quiero covertirlo de JSON a un array */
+if(recuperoStorage != null){
+    favoritos_p = JSON.parse(recuperoStorage);
+
+};
+if (favoritos_p.includes(idmovie)) {
+    boton.innerText="Quitar de Favorito";
+}
+boton.addEventListener("click",function (e) {
+    e.preventDefault()
+    if(favoritos_p.includes(id)){
+        let indice = favoritos_p.indexOf(id);
+        favoritos_p.splice(indice,1);
+        boton.innerText="Agregar a Favorito";
+    }else{
+        favoritos_p.push(id);
+        boton.innerText="Quitar de Favorito";
+    }
+    let favToString = JSON.stringify(favoritos_p);
+    localStorage.setItem('favoritos_p',favToString)
+    
+});
+
 
 let algo = new URLSearchParams(this.location.search)
-let id_pelicula = algo.get("q")
+let id_pelicula = algo.get("p")
 console.log(id_pelicula)
 
 const api_key = '81faef6942a31915ed87b416fbba64ba'
@@ -12,7 +44,7 @@ let fecha_estreno = document.querySelector('.fecha-estreno');
 let genero_pelicula = document.querySelector('.genero_pelicula');
 let descripcion_peli = document.querySelector('.descripcion_peli');
 let imagen = document.querySelector('#img');
-let pepe = document.querySelector('.votos');
+let votos = document.querySelector('.votos');
 let time = document.querySelector('.time');
 
 
@@ -29,7 +61,7 @@ fetch(url)
         genero_pelicula.innerText = data.genres[0].name;
         descripcion_peli.innerText = data.overview;
         imagen.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`
-        pepe.innerText= data.vote_average
+        votos.innerText= data.vote_average
         time.innerText = data.runtime;
     })
     .catch(function (error) {
@@ -49,7 +81,7 @@ window.onclick = function(event) {
 
  // titulos  similares -- chequear codigo
 
-let Newurl = `https://api.themoviedb.org/3/movie/${movie_id}/alternative_titles?api_key${api_key}`
+//let Newurl = `https://api.themoviedb.org/3/movie/${movie_id}/alternative_titles?api_key${api_key}`
 
 fetch(url)
     .then(function (respuesta) {
