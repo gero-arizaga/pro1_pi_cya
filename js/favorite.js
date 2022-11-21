@@ -20,7 +20,9 @@ if (favoritos_p == null || favoritos_p.length == 0) {
 } else {
     
     for (let i = 0; i < favoritos_p.length; i++) {
-        let url =   `https://api.themoviedb.org/3/movie/${favoritos_p[i]}?api_key=${api_key}&language=en-US`
+        let idmovie = favoritos_p[i]
+        let url =   `https://api.themoviedb.org/3/movie/${idmovie}?api_key=${api_key}&language=en-US`
+        console.log(url)
 
         fetch(url)
         .then(function (response) {
@@ -38,7 +40,6 @@ if (favoritos_p == null || favoritos_p.length == 0) {
             return data;
         }).catch(function (error) {
             return error;
-            console.log(error);
         });
 
         

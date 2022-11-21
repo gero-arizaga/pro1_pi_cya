@@ -9,7 +9,7 @@ let condition = favoritos_p.includes(id_pelicula)
 
 /* Preguntamos si es distinto de nulo-  es verdarero quiero covertirlo de JSON a un array */
 if(recuperoStorage != null){
-    favoritos_p = JSON.parse(recuperoStorage, Array);
+    favoritos_p = JSON.parse(recuperoStorage);
     console.log(typeof favoritos_p)
 
 };
