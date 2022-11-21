@@ -1,28 +1,29 @@
 //BOTÓN PARA FAVORITOS
-let qs = location.search;
-let qsObj = new URLSearchParams(qs);
-let idmovie = qsObj.get ('idmovie');
-let id = idmovie;
+let algo = new URLSearchParams(this.location.search) 
+let id_pelicula = algo.get("p")
+console.log(id_pelicula)
 let boton = document.querySelector ('.boton-fav');
-let favoritos_p = [];
+let favoritos_p = '[]';
 let recuperoStorage = localStorage.getItem('favoritos_p');
+let condition = favoritos_p.includes(id_pelicula)
 
 /* Preguntamos si es distinto de nulo-  es verdarero quiero covertirlo de JSON a un array */
 if(recuperoStorage != null){
-    favoritos_p = JSON.parse(recuperoStorage);
+    favoritos_p = JSON.parse(recuperoStorage, Array);
+    console.log(typeof favoritos_p)
 
 };
-if (favoritos_p.includes(idmovie)) {
-    boton.innerText="Quitar de Favorito";
+if (condition) {
+    boton.innerText('Quitar de favoritos')
 }
 boton.addEventListener("click",function (e) {
     e.preventDefault()
-    if(favoritos_p.includes(id)){
-        let indice = favoritos_p.indexOf(id);
+    if(condition){
+        let indice = favoritos_p.indexOf(id_pelicula);
         favoritos_p.splice(indice,1);
         boton.innerText="❤ Agregar a Favorito";
     }else{
-        favoritos_p.push(id);
+        favoritos_p.push(id_pelicula);
         boton.innerText="Quitar de Favorito";
     }
     let favToString = JSON.stringify(favoritos_p);
@@ -32,9 +33,7 @@ boton.addEventListener("click",function (e) {
 
 // detalle de peliculas: 
 
-let algo = new URLSearchParams(this.location.search) 
-let id_pelicula = algo.get("p")
-console.log(id_pelicula)
+
 
 const api_key = '81faef6942a31915ed87b416fbba64ba'
 let url = `https://api.themoviedb.org/3/movie/${id_pelicula}?api_key=${api_key}&language=en-US`
@@ -81,7 +80,7 @@ window.onclick = function(event) {
  
  // ver titulos  similares -- chequear codigo
 
-let urlreco = `https://api.themoviedb.org/3/movie/${id_pelicula}/recommendations?api_key=81faef6942a31915ed87b416fbba64ba`
+//let urlreco = `https://api.themoviedb.org/3/movie/${id_pelicula}/recommendations?api_key=81faef6942a31915ed87b416fbba64ba`
 let btn = document.querySelector('.botonSimil');
 
 
