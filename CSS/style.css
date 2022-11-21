@@ -244,11 +244,30 @@ p{
     font-size: 18px;
 
 }
+
+
+
+
 .boton-fav:hover{
     background-color:blue;
 }
 .boton-fav i{
     margin-right: 20px;
+}
+
+.botonSimil{
+    background: rgba(28, 127, 51, 0.288);
+    border: none;
+    border-radius: 15px;
+    padding: 15px 30px;
+    color: white;
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.botonSimil:hover{
+    background-color:blue;
 }
 
 /* footer */

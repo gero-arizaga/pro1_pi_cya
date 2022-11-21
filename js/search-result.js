@@ -32,6 +32,8 @@ function runSearch (keyword) {
         resultTitle.innerHTML = "No search results found";
     }
   }
+    )}
+    
 let url = ``;
     
     fetch(url)
@@ -64,4 +66,4 @@ let url = ``;
     ).catch(function(error) {
         return error;
     }
-    )}
+    )

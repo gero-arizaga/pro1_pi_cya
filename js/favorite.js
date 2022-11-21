@@ -1,38 +1,44 @@
 let api_key = '81faef6942a31915ed87b416fbba64ba'
-let recuperoStorage = localStorage.getItem('favoritos');
-let favoritos = JSON.parse(recuperoStorage);
+
+/* Recuperar localStorage */
+let recuperoStorage = localStorage.getItem('favoritos_p');
+/*  ["2"] */
+
+let favoritos_p = JSON.parse(recuperoStorage);
 /*  [2,4,6] */
 
-let section = document.querySelector("#lista");
-let peliculasFavoritas = ''; /* ---------------------->   OJALDRE ACA */
+let section = document.querySelector("#lista_p");
+let Peliculas_Favoritas = ''; /* ---------------------->   OJALDRE ACA */
 
-console.log(favoritos);
+console.log(favoritos_p);
 
 /* EVALUAR SI EL ARRAY TIENE 0 ELEMENTOS o si viene nulo */
 
-if (favoritos == null || favoritos.length == 0) {
+if (favoritos_p == null || favoritos_p.length == 0) {
     /* Muestres no hay favoritos */
     section.innerHTML = '<p>No hay peliculas en favoritos</p>'
 } else {
     
-    for (let i = 0; i < favoritos.length; i++) {
-        let url =   `https://api.themoviedb.org/3/tv/top_rated?${favoritos[i]}`
+    for (let i = 0; i < favoritos_p.length; i++) {
+        let url =   `https://api.themoviedb.org/3/movie/${favoritos_p[i]}?api_key=${api_key}&language=en-US`
 
         fetch(url)
         .then(function (response) {
             return response.json();
         }).then(function (data) {
             console.log(data);
-            personajesFavoritos += `<article>
-                                        <img src=${data.image} alt='${data.name}' />
-                                        <p>Name: <a href="./detallePersonaje.html?idPersonaje=${data.id}"> ${data.name}</a> </p>
-                                        <p>Status: ${data.status} </p>
-                                    </article>`;
-            section.innerHTML = pelicualsFavoritas;
+            section.innerHTML += `<article>
+                    <a href="./detail-movie.html?p=${idmovie}"> <img class="imagenes" src="https://image.tmdb.org/t/p/w500/${popular.poster_path}" alt=""></a>
+                    <a href="./detail-movie.html?p=${idmovie}"><h3>${popular.title}</h3></a>
+                    <a href="./detail-movie.html?p=${idmovie}"><p>${popular.release_date}</p></a>
+                    <a href="./detail-movie.html?p=${idmovie}" class="ver_mas">Ver mas</a>
+                </article>` 
+            
 
             return data;
         }).catch(function (error) {
             return error;
+            console.log(error);
         });
 
         
