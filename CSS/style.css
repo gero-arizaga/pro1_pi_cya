@@ -54,6 +54,7 @@ body{
 
 
 
+
 .ver_mas{
     color: white;
     text-decoration: none;
@@ -91,11 +92,28 @@ body{
     text-decoration: none;
 }
 
-.item{
-    padding: 15px;
+ .item{
+    /* padding: 15px; */
     width: 150px;
     transition: all 300ms;
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
 }
+a {
+    color: white;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+
+
+
 .item:hover{
     transform: scale(1.15);
 }
@@ -139,6 +157,7 @@ p{
     justify-content: center;
     align-items: center;
     padding: 50px;
+    flex-wrap: wrap;
 }
    
 .generosPadre .generos{
@@ -147,26 +166,24 @@ p{
     align-items: center;
     justify-content: center;
     align-self: center;
-    background-color: rgba(170, 170, 170, 0.393);
-    padding: 100px;
-    margin: 0px;
-    border-radius: 100px;
-    font-weight: normal;
-    font-size: 45px;
-    height: 100vh;
-    width: 95%;
-}
   
-.genero-item{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: white;
-}
+ }
+ .generoa{
+ color: white;
+  background-color: rgba(170, 170, 170, 0.393);
+ padding: 70px;
+ margin: 10%;
+ border-radius: 100px;
+ font-weight: normal;
+ font-size: 45px;
+ align-items: center;
+ justify-content: center;
+ text-decoration: none;
+ }
+
   
 .main-generos{
-    background-image: url("../img/joker.jpg");
+    background-image: url("");
     background-repeat: no-repeat;
     background-position:center;
     background-size: cover;
@@ -193,8 +210,7 @@ p{
     background-color: linear-gradient(to right, #4286f4, #373B44);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
-    height: 100vh;    
+    background-size: cover;   
 }
 
 .main-movie{
@@ -202,7 +218,6 @@ p{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 100vh;
 }
 
 .cont-detail{
@@ -243,6 +258,41 @@ p{
     cursor: pointer;
     font-size: 18px;
 
+}
+
+button.btn-recomendaciones {
+    background-color: rgba;
+    background: rgba(28, 127, 51, 0.288);
+    border: none;
+    border-radius: 15px;
+    padding: 15px 30px;
+    color: white;
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.mostrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.recomendaciones li {
+    width: 10vw;
+    list-style: none;
+}
+
+.recomendaciones li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.ocultar {
+    display: none;
 }
 
 
