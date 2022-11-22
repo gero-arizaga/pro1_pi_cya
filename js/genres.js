@@ -20,3 +20,6 @@ fetch(url_generosPeli)
     console.log(error);
     return error;
 })
+window.addEventListener('load', function (e) {
+    this.document.querySelector('#loader').classList.toggle('loader2')
+})

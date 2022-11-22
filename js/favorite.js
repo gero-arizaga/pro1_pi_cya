@@ -49,3 +49,6 @@ if (favoritos_p == null || favoritos_p.length == 0) {
         
     }
 }
+window.addEventListener('load', function (e) {
+    this.document.querySelector('#loader').classList.toggle('loader2')
+})
