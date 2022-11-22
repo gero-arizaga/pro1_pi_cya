@@ -1,11 +1,11 @@
 let api_key = '81faef6942a31915ed87b416fbba64ba'
 let qs = location.search;
 let qsObj = new URLSearchParams(qs);
-let personaje = qsObj.get('busqueda');
+let pelicula = qsObj.get('busqueda');
 
 let urlbusqueda = `https://api.themoviedb.org/3/movie?api_key= ${api_key}&language=en-US&page=1`
 
-let searchBar = document.getElementById("searchBar");
+let searchBar = document.querySelector(".input");
 
 function runSearch (keyword) {
     let url = `${urlbusqueda}${api_key}&query=${keyword}`;
