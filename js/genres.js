@@ -10,7 +10,7 @@ fetch(url_generosPeli)
     return respuesta.json();
 })
 .then(function(data) {
-    for(let i = 0; i < 6; i++){
+    for(let i = 0; i < 10; i++){
         let generoPeli = data.genres[i].name
         generosPeli.innerHTML += `<article class="generos">
                                   <a class="generoa" href="./detail-genres.html?id=${data.genres[i].id}">${generoPeli}</a>  </article>` 

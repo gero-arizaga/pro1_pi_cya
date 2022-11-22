@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Resultado de busqueda</title>
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
 
@@ -21,7 +21,7 @@
             <article>
                 <form class="form" action="search-results.html" method="get">
                     <div>
-                        <input class='input' type="text" name="busqueda"  placeholder="Buscar" >
+                        <input class='input' type="text" name="busqueda"  placeholder="Buscar" value="">
                     </div>
                     <div>
                         <button type="submit">Buscar</button>
@@ -30,11 +30,16 @@
             </article>
         </div>
     </header>
-    <section>
-        <article class="result">
-            <ul id="resultado-busqueda"></ul>
-        </article>
+    <main>
+        <h2 class="titulosBusqueda"></h2>
+    <section class="resultadoBusquedaP">
+        
     </section>
+    
+    <section class="resultadoBusquedaS ">
+        
+    </section>
+</main>
     <script src="./js/search-result.js"></script>
     <script src="./js/buscador.js"></script>
 </body>

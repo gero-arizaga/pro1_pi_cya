@@ -24,7 +24,7 @@
             <article>
                 <form id="form" action="search-results.html" method="get">
                     <div>
-                        <input type="text" name="busqueda" id="palabraPelicula" placeholder="Buscar" id="SearchBar">
+                        <input type="text" name="busqueda" class="input" placeholder="Buscar" value="">
                     </div>
                     <div>
                         <button type="submit">Buscar</button>
@@ -34,62 +34,13 @@
         </div>
     </header>
     <main>
-        <div class="contenedor-generos">
-            <h2 class="titulos">Terror</h2>
-            <section class="cont-listas">
-                <article class="item">
-                 
-                </article>
-                <article class="item">
-                 
-                </article>
-                <article class="item">
-                
-                </article>
-                <article class="item">
-                 
-                </article>
-                <article class="item">
-              
-                </article>
-            </section>
-            <h2 class="titulos"> Comedia</h2>
-            <section class="cont-listas">
-                <article class="item">
-                  
-                </article>
-                <article class="item">
-                    
-                </article>
-                <article class="item">
-                    
-                </article>
-                <article class="item">
-                    
-                </article>
-                <article class="item">
-                    
-                </article>
-            </section>
-            <h2 class="titulos"> Accion</h2>
-            <section class="cont-listas">
-                <article class="item">
-                    
-                </article>
-                <article class="item">
-                    
-                </article>
-                <article class="item">
-                    
-                </article>
-                <article class="item">
-                    
-                </article>
-                <article class="item">
-                    
-                </article>
-            </section>
-        </div>
+        <h2 class="titulos">Peliculas</h2>
+        <section class="cont-listasPelis">
+        </section>   
+        <h2 class="titulos">Series</h2>
+        <section class="cont-listasSeries">
+
+        </section>
     </main>
     <footer>
         <ul>
@@ -107,6 +58,7 @@
             alt="dataBase">
     </footer>
     <script src="./js/detail-genres.js"></script>
+    <script src="./js/buscador.js"></script>
 </body>
 
 </html>
