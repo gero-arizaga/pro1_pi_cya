@@ -1,10 +1,10 @@
 let api_key = '81faef6942a31915ed87b416fbba64ba'
 
 /* Recuperar localStorage */
-let recuperoStorage = localStorage.getItem('favoritos_p');
+let recuperopfav = localStorage.getItem('favoritos_p');
 /*  ["2"] */
 
-let favoritos_p = JSON.parse(recuperoStorage);
+let favoritos_p = JSON.parse(recuperopfav);
 /*  [2,4,6] */
 
 let section = document.querySelector('#lista_p');

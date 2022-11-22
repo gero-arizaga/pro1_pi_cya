@@ -29,6 +29,7 @@ boton.addEventListener("click",function (e) {
     if (favoritos_p.includes(id_pelicula)) {
         let indice = favoritos_p.indexOf(id_pelicula);
         favoritos_p.splice(indice,1);
+        console.log(indice);
         boton.innerText="❤ Agregar a Favorito";
         console.log(favoritos_p);
     }else{
