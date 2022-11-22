@@ -2,16 +2,9 @@ let algo = new URLSearchParams(this.location.search);
 let id_pelicula = algo.get("p");
 console.log(id_pelicula);
 
-<<<<<<< HEAD
-/* Preguntamos si es distinto de nulo-  es verdarero quiero covertirlo de JSON a un array */
-if(recuperoStorage != null){
-    favoritos_p = JSON.parse(recuperoStorage);
-    console.log(typeof favoritos_p)
-=======
 let boton = document.querySelector(".boton-fav");
 let favoritos_p = [];
 let recuperoStorage = localStorage.getItem("favoritos_p");
->>>>>>> c03430dd0e4e4c9a2610a0ecf496008fb13f8caf
 
 /* Preguntamos si es distinto de nulo-  es verdadero quiero convertirlo de JSON a un array */
 if (recuperoStorage != null) {
