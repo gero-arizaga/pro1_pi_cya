@@ -1,30 +1,44 @@
+//BOTÓN PARA FAVORITOS
 let algo = new URLSearchParams(this.location.search);
 let id_pelicula = algo.get("p");
-console.log(id_pelicula);
-
-let boton = document.querySelector(".boton-fav");
+let boton = document.querySelector ('.boton-fav');
 let favoritos_p = [];
-let recuperoStorage = localStorage.getItem("favoritos_p");
+let recuperoStorage = localStorage.getItem('favoritos_p');
+let condition = favoritos_p.includes(id_pelicula);
+/* Preguntamos si es distinto de nulo-  es verdarero quiero covertirlo de JSON a un array */
+if(recuperoStorage != null){
+    favoritos_p = JSON.parse(recuperoStorage);
+    console.log(typeof favoritos_p);
 
-/* Preguntamos si es distinto de nulo-  es verdadero quiero convertirlo de JSON a un array */
-if (recuperoStorage != null) {
-  favoritos_p = JSON.parse(recuperoStorage);
-}
+};
+console.log(condition)
 if (favoritos_p.includes(id_pelicula)) {
-  boton.innerText = "Quitar de Favorito";
+    boton.innerText = "Quitar de favoritos";
 }
-boton.addEventListener("click", function (e) {
-  e.preventDefault();
-  if (favoritos_p.includes(id)) {
-    let indice = favoritos_p.indexOf(id);
-    favoritos_p.splice(indice, 1);
-    boton.innerText = "❤ Agregar a Favorito";
-  } else {
-    favoritos_p.push(id);
-    boton.innerText = "Quitar de Favorito";
-  }
-  let favToString = JSON.stringify(favoritos_p);
-  localStorage.setItem("favoritos_p", favToString);
+boton.addEventListener("click",function (e) {
+    e.preventDefault()
+    if(recuperoStorage != null){
+        favoritos_p = JSON.parse(recuperoStorage);
+        console.log(typeof favoritos_p);
+    
+    };
+    console.log(condition)
+    if (favoritos_p.includes(id_pelicula)) {
+        boton.innerText= "Quitar de favoritos";
+    }
+    if (favoritos_p.includes(id_pelicula)) {
+        let indice = favoritos_p.indexOf(id_pelicula);
+        favoritos_p.splice(indice,1);
+        boton.innerText="❤ Agregar a Favorito";
+        console.log(favoritos_p);
+    }else{
+        favoritos_p.push(id_pelicula);
+        boton.innerText="Quitar de Favorito";
+        console.log(favoritos_p);
+    }
+    let favToString = JSON.stringify(favoritos_p);
+    localStorage.setItem('favoritos_p',favToString);
+
 });
 
 
