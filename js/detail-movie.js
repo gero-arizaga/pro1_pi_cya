@@ -31,6 +31,8 @@ boton.addEventListener("click", function (e) {
 const api_key = "81faef6942a31915ed87b416fbba64ba";
 let url = `https://api.themoviedb.org/3/movie/${id_pelicula}?api_key=${api_key}&language=en-US`;
 
+//seleccione todos los elementos del DOM
+
 let subtitulos = document.querySelector(".subtitulos");
 console.log(subtitulos);
 let fecha_estreno = document.querySelector(".fecha-estreno");
@@ -74,6 +76,7 @@ fetch(urlreco)
         return respuesta.json();
     })
     .then(function (data) {
+      //capture el elemento  html donde quiero hacer una modificacion
         let recomendaciones = document.querySelector(".recomendaciones");
         
         for (let i = 0; i < 5; i++) {
@@ -90,8 +93,8 @@ fetch(urlreco)
         let btn_recomendaciones = document.querySelector(".btn-recomendaciones");
 
         btn_recomendaciones.addEventListener("click", function (e) {
-            e.preventDefault();
-            recomendaciones.classList.toggle("ocultar");
+            e.preventDefault();          //evita el comport x default del hipervinculo
+            recomendaciones.classList.toggle("ocultar"); //si oculatr no existe lo anade, de lo contrario la elimina 
         })
     })
     .catch(function (error) {
