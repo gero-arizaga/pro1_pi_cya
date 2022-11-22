@@ -109,6 +109,7 @@ a {
     font-size: 1.17em;
     margin-block-start: 1em;
     margin-block-end: 1em;
+    text-decoration: none;
 }
 
 
@@ -123,6 +124,7 @@ img{
 }
 h3{
     color: white;
+    text-decoration: none;
 
 
   }
@@ -189,6 +191,23 @@ p{
     background-size: cover;
     margin: 0px;
 }
+.generosSeries{
+    display: flex;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+   
+.generosSeries .generos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+  
+ }
 
 /*GÉNEROS DETAIL HTML*/
 
@@ -196,7 +215,20 @@ p{
     width: 90%;
     margin: auto;
 }
-
+.cont-listasSeries{
+    display:  flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 650px;
+    width: 96%;  
+}
+.cont-listasPelis{
+    display:  flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 650px;
+    width: 96%;  
+}
 /*FAVORITOS*/
 
 .contenedor-generos{

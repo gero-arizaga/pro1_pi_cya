@@ -77,7 +77,7 @@ fetch(url)
 
          subtitulos.innerText = data.title;
          fecha_estreno.innerText = `Fecha de estreno: ${data.release_date}`;
-         genero_pelicula.innerText = `<a class='generoDetail' href='./detail-genres.html?id=${data.genres[i].id}'>${data.genres[0].name}</a>`;
+         genero_pelicula.innerHTML = `<p class="genero_pelicula">Genero:<a class='generoDetail' href='./detail-genres.html?id=${data.genres[0].id}'>${data.genres[0].name}</a></p>`;
          descripcion_peli.innerText = data.overview;
          imagen.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`;
          votos.innerText= `Calificacion: ${data.vote_average}`;

@@ -63,28 +63,17 @@ fetch(url)
 
         console.log(data);
 
-         let subtitulos = document.querySelector('.subtitulos');
-         console.log(subtitulos);
-         let fecha_estreno = document.querySelector('.fecha-estreno');
-         console.log(fecha_estreno)
-         let genero_series = document.querySelector('.genero_serie');
-        console.log(genero_series)
-         let descripcion_serie = document.querySelector('.descripcion_serie');
-            console.log(descripcion_serie)
-         let imagen = document.querySelector('#img');
-            console.log(imagen)
-         let vote = document.querySelector('.vote');
-            console.log(vote)
+       ///
         
 
 
         
-        subtitulos.innerText += ` ${ data.name }`
-        fecha_estreno.innerText += ` ${ data.first_air_date } `
-        genero_series.innerText += `<a class='generoDetail' href='./detail-genres.html?id=${data.genres[i].id}'>${data.genres[0].name}</a>`;
-        descripcion_serie.innerText += ` ${ data.overview } `
+        subtitulos.innerText += data.name; 
+        fecha_estreno.innerText += `Fecha de estreno: ${data.first_air_date}`;
+        genero_series.innerHTML += `<a class='generoDetail' href='./detail-genres.html?id=${data.genres[0].id}'>${data.genres[0].name}</a>`;
+        descripcion_serie.innerText += data.overview ;
         imagen.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`
-        vote.innerText += ` ${data.vote_average}`
+        vote.innerText += `Calificacion: ${data.vote_average}`;
 
 
     })
@@ -107,7 +96,7 @@ fetch(url)
              
              for (let i = 0; i < 5; i++) {
                  recomendaciones.innerHTML += `<li>
-                     <a href="detail-serie.html?p=${data.results[i].id}">
+                     <a href="detail-serie.html?s=${data.results[i].id}">
                          <img src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt="">
                          <p>${data.results[i].name}</p>
                          <p>${data.results[i].first_air_date}</p>
