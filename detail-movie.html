@@ -1,80 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FONTAWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <title>Detalle de Pelicula</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Detalle de Pelicula </title>
-    <link rel="stylesheet" href="./CSS/style.css">
-</head>
-
-<body>
+  <body>
     <header>
-        <div class="contenedor-h-index">
-            <img class="logop" src="./img/Logo Pelis Play.png" alt="pe">
-            <nav>
-                <a href="./index.html"> Inicio</a>
-                <a href="./genres.html"> Generos </a>
-                <a href="./favorite.html"> Favoritos </a>
-            </nav>
-            <article>
-                <form id="form" action="search-results.html" method="get">
-                    <div>
-                        <input type="text" name="busqueda" id="palabraPelicula" placeholder="Buscar" id="SearchBar">
-                    </div>
-                    <div>
-                        <button type="submit">Buscar</button>
-                    </div>
-                </form>
-            </article>
-        </div>
+      <div class="contenedor-h-index">
+        <img class="logop" src="./img/Logo Pelis Play.png" alt="pe" />
+        <nav>
+          <a href="./index.html"> Inicio</a>
+          <a href="./genres.html"> Generos </a>
+          <a href="./favorite.html"> Favoritos </a>
+        </nav>
+        <article>
+          <form class="form" action="search-results.html" method="get">
+            <div>
+              <input
+                type="text"
+                name="busqueda"
+                id="palabraPelicula"
+                placeholder="Buscar"
+                id="SearchBar"
+              />
+            </div>
+            <div>
+              <button type="submit">Buscar</button>
+            </div>
+          </form>
+        </article>
+      </div>
     </header>
 
     <main class="main-movie">
-        <h2 class="titulodedetalle"></h2>
-        <section class="cont-detail">
-            <article class="item-detail">
-                <img id="img" src="" alt="">
-                <h3 class="subtitulos"></h3>
-                <p class="fecha-estreno">Fecha De Estreno:</p>
-                <p class="votos">Calificacion:</p>
-                <p class="time"> Duracion:</p>
+      <h2 class="titulodedetalle"></h2>
+      <section class="cont-detail">
+        <article class="item-detail">
+          <img id="img" src="" alt="" />
+          <h3 class="subtitulos"></h3>
+          <p class="fecha-estreno">Fecha De Estreno:</p>
+          <p class="votos">Calificacion:</p>
+          <p class="time">Duracion:</p>
 
-           <!-- <section class="Recomendaciones "></section> -->
+          <!-- <section class="Recomendaciones "></section> -->
 
-                
-                <a class="genero-en-detail" href="./detail-genres.html">
-                    <p class="genero_pelicula"> Genero:</p>
-                </a>
-                <p class="descripcion_peli">Sinopsis:</p>
-                <br>
-                <button role="button" class="boton-fav"><i class="fas fa-play"></i>❤ Agregar a Favoritos</button>
-                <section class="contenedor2">
-                    <section class="recomendaciones">
-                 <button role = "button" class="botonSimil" type="submit">Show Similars </button> 
-                </section>
+          <a class="genero-en-detail" href="./detail-genres.html">
+            <p class="genero_pelicula">Genero:</p>
+          </a>
+          <p class="descripcion_peli">Sinopsis:</p>
+          <br />
+          <button role="button" class="boton-fav">
+            <i class="fas fa-play"></i>❤ Agregar a Favoritos
+          </button>
+          <section class="contenedor2">
+              <section>
+                <button role="button" class="btn-recomendaciones" type="submit">
+                  Show Similars
+                </button>
+                <ul class="recomendaciones mostrar "></ul>
             </section>
-                </article>
-        </section>
-      
-    
+          </section>
+        </article>
+      </section>
     </main>
-     
+
     <footer>
-        <p>
-            <a href="https://twitter.com/NetflixES"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://www.facebook.com/NetflixArg/?brand_redir=268372269857888"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/netflix/"><i class="fa-brands fa-instagram"></i></a>
-
-
-        </p>
-        <h4><strong> Arizaga Geronimo, Chaiman Tomas & Yukelson Isabella </strong></h4>
+      <ul>
+        <a href="https://twitter.com/NetflixES"
+          ><i class="fab fa-twitter"></i></a>
+        <a
+          href="https://www.facebook.com/NetflixArg/?brand_redir=268372269857888"
+          ><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/netflix/"
+          ><i class="fab fa-instagram"></i
+        ></a>
+          </ul>
+      <h4>
+        <strong> Arizaga Geronimo, Chaiman Tomas & Yukelson Isabella </strong>
+      </h4>
     </footer>
     <script src="./js/detail-movie.js"></script>
     <script src="./js/buscador.js"></script>
-
-</body>
-
+  </body>
 </html>
