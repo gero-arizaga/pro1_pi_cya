@@ -137,18 +137,23 @@ p{
 }
 
 /*RESULTADOS DE BUSQUEDA HTML*/
-
-.resultado-busqueda{
-    display: flex;
-    flex-direction: column;
+.tituloBusqueda{    color: white;
+        font-family:'Open Sans', sans-serif; 
+    text-decoration: none;
+}
+.resultadoBusquedaP{
+    display:  flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
-    align-self: center;
-    background-color: rgba(170, 170, 170, 0.393);
-    padding: 100px;
-    margin: 0px;
-    border-radius: 100px;
-    color: white;
+    height: 650px;
+    width: 96%;  
+}
+.resultadoBusquedaS{
+    display:  flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 650px;
+    width: 96%;  
 }
 
 /*GÉNEROS HTML*/

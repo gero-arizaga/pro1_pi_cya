@@ -26,7 +26,7 @@ boton.addEventListener("click", function (e) {
   let favToString = JSON.stringify(favoritos_p);
   localStorage.setItem("favoritos_p", favToString);
 });
-
+console.log(favoritos_p)
 
 const api_key = "81faef6942a31915ed87b416fbba64ba";
 let url = `https://api.themoviedb.org/3/movie/${id_pelicula}?api_key=${api_key}&language=en-US`;
