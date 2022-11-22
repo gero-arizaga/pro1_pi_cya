@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./CSS/style.css">
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        crossorigin="anonymous" />
 </head>
 
 <body>
@@ -35,33 +38,49 @@
 
     </header>
     <main class="main-serie">
+       
         <section class="cont-detail">
             <article class="item-detail">
                 <img id="img" src="" alt="">
                 <h3 class="subtitulos"></h3>
-                <h3 class="vote"></h3>
-                <h3 class="time"></h3>
-
-
+                <h3 class="vote"> Calificacion: </h3>
+                <p class="fecha-estreno"> Fecha De Estreno: </p>
+        
 
                 <a class="genero-en-detail" href="./detail-genres.html">
-                    <p class="genero_series"></p>
+                    <p class="genero_serie">Genero:</p>
                 </a>
-                <p class="descripcion_serie"></p>
-                <br>
-                <button role="button" class="boton-fav"><i class="fas fa-play"></i>❤ Agregar a Favoritos</button>
-                <button role = "button" class="botonSimil" type="submit">Show Similars </button>
+                <p class="descripcion_serie">Sinopsis:</p>
+                <br />
+                <button role="button" class="boton-fav">
+                    <i class="fas fa-play"></i>❤ Agregar a Favoritos
+                </button>
+                <section class="contenedor2">
+                    <section>
+                        <button role="button" class="btn-recomendaciones" type="submit">
+                            Show Similars
+                        </button>
+                        <ul class="recomendaciones mostrar "></ul>
+                    </section>
+                </section>
             </article>
         </section>
-        
     </main>
+
+
     <footer>
-        <p>
-            <a href="#"></a>
-        </p>
-        <h4><strong> Arizaga Geronimo, Chaiman Tomas & Yukelson Isabella </strong></h4>
+        <ul>
+            <a href="https://twitter.com/NetflixES"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/NetflixArg/?brand_redir=268372269857888"><i
+                    class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/netflix/"><i class="fab fa-instagram"></i></a>
+        </ul>
+        <h4>
+            <strong> Arizaga Geronimo, Chaiman Tomas & Yukelson Isabella </strong>
+        </h4>
     </footer>
     <script src="./js/detail-series.js"></script>
+    <script src="./js/buscador.js"></script>
 </body>
 
 </html>
