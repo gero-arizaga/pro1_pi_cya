@@ -6,6 +6,10 @@ let url_series = `https://api.themoviedb.org/3/tv/top_rated?api_key=${api_key}&l
 let listaPeli = document.querySelector('.cont-listas_pelis');
 let listaLatest = document.querySelector('.cont-listas_latest');
 let listaSeries = document.querySelector('.cont-listas_series')
+
+window.addEventListener('load', function (e) {
+    this.document.querySelector('#loader').classList.toggle('loader2')
+})
 fetch(url_popu)
 .then(function(respuesta) {
     return respuesta.json();
