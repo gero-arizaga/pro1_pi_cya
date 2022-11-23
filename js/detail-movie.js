@@ -105,26 +105,9 @@ fetch(url)
                 console.log(error);
     })
 
- //boton ver  pelis similares  -- chequear codigo
-
- let botonSimil = document.getElementById(".botonSimil");
-window.onclick = function(event) {
-     if (event.target == botonSimil) {
-         botonSimil.style.display = "none";
-     }
- }
 
 
- 
- // ver titulos  similares -- chequear codigo
-
-//let urlreco = `https://api.themoviedb.org/3/movie/${id_pelicula}/recommendations?api_key=81faef6942a31915ed87b416fbba64ba`
-let btn = document.querySelector('.botonSimil');
-
-
-
-//let url = `https://api.themoviedb.org/3/movie/${id_pelicula}?api_key=${api_key}&language=en-US`
-let detalle_pelicula = document.querySelector(".cont-detail")
+// let detalle_pelicula = document.querySelector(".cont-detail")
 let urlreco = `https://api.themoviedb.org/3/movie/${id_pelicula}/recommendations?api_key=${api_key}`;
 
 fetch(urlreco)
@@ -136,15 +119,16 @@ fetch(urlreco)
         let recomendaciones = document.querySelector(".recomendaciones");
         
         for (let i = 0; i < 5; i++) {
-            recomendaciones.innerHTML += `<li>
-                <a href="detail-movie.html?p=${data.results[i].id}">
-                    <img src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt="">
-                    <p>${data.results[i].title}</p>
-                    <p>${data.results[i].release_date}</p>
+          recomendaciones.innerHTML += `<li>
+              <a href="detail-movie.html?p=${data.results[i].id}">
+                  <img src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt="">
+                  <p>${data.results[i].title}</p>
+                  <p>${data.results[i].release_date}</p>
 
-                </a>
-            </li>`;
-        }
+              </a>
+          </li>`;
+      }
+
 
         let btn_recomendaciones = document.querySelector(".btn-recomendaciones");
 
