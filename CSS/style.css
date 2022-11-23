@@ -240,7 +240,20 @@ p{
     width: 90%;
     margin: auto;
 }
-
+#lista_p{
+    display:  flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 650px;
+    width: 96%; 
+}
+#lista_s{
+    display:  flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 650px;
+    width: 96%; 
+}
 /*SERIES Y PELICULAS (DETAIL)*/
 
 .main-serie{

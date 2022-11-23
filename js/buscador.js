@@ -11,4 +11,3 @@ let form    = document.querySelector('.form');
          this.submit()
      }
  })
-

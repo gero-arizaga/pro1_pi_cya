@@ -1,6 +1,6 @@
 //BOTÓN PARA FAVORITOS
-let alg = new URLSearchParams(this.location.search);
-let id_pelicula = alg.get("p");
+let algo = new URLSearchParams(this.location.search)
+let tv_id = algo.get("s")
 let boton = document.querySelector ('.boton-favs');
 let favoritos_s = [];
 let recuperoStorage = localStorage.getItem('favoritos_s');
@@ -11,9 +11,9 @@ if(recuperoStorage != null){
     console.log(typeof favoritos_s);
 
 };
-let condition = favoritos_s.includes(id_pelicula);
+let condition = favoritos_s.includes(tv_id);
 console.log(condition)
-if (favoritos_s.includes(id_pelicula)) {
+if (favoritos_s.includes(tv_id)) {
     boton.innerText = "Quitar de favoritos";
 }
 boton.addEventListener("click",function (e) {
@@ -24,29 +24,26 @@ boton.addEventListener("click",function (e) {
         console.log(typeof favoritos_s);
     
     };
-    console.log(favoritos_p.includes(id_pelicula))
-    if (favoritos_s.includes(id_pelicula)) {
-        let indice = favoritos_s.indexOf(id_pelicula);
+    console.log(favoritos_s.includes(tv_id))
+    if (favoritos_s.includes(tv_id)) {
+        let indice = favoritos_s.indexOf(tv_id);
         favoritos_s.splice(indice,1);
         console.log(indice);
         boton.innerText="❤ Agregar a Favorito";
         console.log('post agregar a favoritos', favoritos_s);
     }else{
-        favoritos_s.push(id_pelicula);
+        favoritos_s.push(tv_id);
         boton.innerText="Quitar de Favorito";
         console.log(favoritos_s);
     }
     let favToString = JSON.stringify(favoritos_s);
-    console.log('actualizando storage', favToString)
+    console.log('actualizando storage', favToString);
     localStorage.setItem('favoritos_s',favToString);
 
 });
-console.log(favoritos_p)
+console.log(favoritos_s)
 
 
-
-let algo = new URLSearchParams(this.location.search)
-let tv_id = algo.get("s")
 console.log(tv_id)
 
 const api_key = '81faef6942a31915ed87b416fbba64ba';
