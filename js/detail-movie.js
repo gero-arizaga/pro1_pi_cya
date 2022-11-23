@@ -1,16 +1,17 @@
 //BOTÓN PARA FAVORITOS
 let algo = new URLSearchParams(this.location.search);
 let id_pelicula = algo.get("p");
-let boton = document.querySelector ('.boton-fav');
+let boton = document.querySelector ('.boton-favp');
 let favoritos_p = [];
 let recuperoStorage = localStorage.getItem('favoritos_p');
-let condition = favoritos_p.includes(id_pelicula);
+
 /* Preguntamos si es distinto de nulo-  es verdarero quiero covertirlo de JSON a un array */
 if(recuperoStorage != null){
     favoritos_p = JSON.parse(recuperoStorage);
     console.log(typeof favoritos_p);
 
 };
+let condition = favoritos_p.includes(id_pelicula);
 console.log(condition)
 if (favoritos_p.includes(id_pelicula)) {
     boton.innerText = "Quitar de favoritos";
@@ -18,31 +19,31 @@ if (favoritos_p.includes(id_pelicula)) {
 boton.addEventListener("click",function (e) {
     e.preventDefault()
     if(recuperoStorage != null){
+        recuperoStorage = localStorage.getItem('favoritos_p');
         favoritos_p = JSON.parse(recuperoStorage);
         console.log(typeof favoritos_p);
     
     };
-    console.log(condition)
-    if (favoritos_p.includes(id_pelicula)) {
-        boton.innerText= "Quitar de favoritos";
-    }
+    console.log(favoritos_p.includes(id_pelicula))
     if (favoritos_p.includes(id_pelicula)) {
         let indice = favoritos_p.indexOf(id_pelicula);
         favoritos_p.splice(indice,1);
         console.log(indice);
         boton.innerText="❤ Agregar a Favorito";
-        console.log(favoritos_p);
+        console.log('post agregar a favoritos', favoritos_p);
     }else{
         favoritos_p.push(id_pelicula);
         boton.innerText="Quitar de Favorito";
         console.log(favoritos_p);
     }
     let favToString = JSON.stringify(favoritos_p);
+    console.log('actualizando storage', favToString)
     localStorage.setItem('favoritos_p',favToString);
 
 });
 console.log(favoritos_p)
 
+//
 const api_key = "81faef6942a31915ed87b416fbba64ba";
 let url = `https://api.themoviedb.org/3/movie/${id_pelicula}?api_key=${api_key}&language=en-US`;
 

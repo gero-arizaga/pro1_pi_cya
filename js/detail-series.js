@@ -1,36 +1,47 @@
-
 //BOTÓN PARA FAVORITOS
-let qs = location.search;
-let qsObj = new URLSearchParams(qs);
-let idserie = qsObj.get ('idserie');
-let id = idserie;
-let boton = document.querySelector ('.boton-fav');
+let alg = new URLSearchParams(this.location.search);
+let id_pelicula = alg.get("p");
+let boton = document.querySelector ('.boton-favs');
 let favoritos_s = [];
 let recuperoStorage = localStorage.getItem('favoritos_s');
 
 /* Preguntamos si es distinto de nulo-  es verdarero quiero covertirlo de JSON a un array */
 if(recuperoStorage != null){
     favoritos_s = JSON.parse(recuperoStorage);
+    console.log(typeof favoritos_s);
 
 };
-if (favoritos_s.includes(idserie)) {
-    boton.innerText="Quitar de Favorito";
+let condition = favoritos_s.includes(id_pelicula);
+console.log(condition)
+if (favoritos_s.includes(id_pelicula)) {
+    boton.innerText = "Quitar de favoritos";
 }
 boton.addEventListener("click",function (e) {
     e.preventDefault()
-    if(favoritos_s.includes(id)){
-        let indice = favoritos_s.indexOf(id);
+    if(recuperoStorage != null){
+        recuperoStorage = localStorage.getItem('favoritos_s');
+        favoritos_s = JSON.parse(recuperoStorage);
+        console.log(typeof favoritos_s);
+    
+    };
+    console.log(favoritos_p.includes(id_pelicula))
+    if (favoritos_s.includes(id_pelicula)) {
+        let indice = favoritos_s.indexOf(id_pelicula);
         favoritos_s.splice(indice,1);
+        console.log(indice);
         boton.innerText="❤ Agregar a Favorito";
+        console.log('post agregar a favoritos', favoritos_s);
     }else{
-        favoritos_s.push(id);
+        favoritos_s.push(id_pelicula);
         boton.innerText="Quitar de Favorito";
+        console.log(favoritos_s);
     }
     let favToString = JSON.stringify(favoritos_s);
-    localStorage.setItem('favoritos_s',favToString)
-    
-});
+    console.log('actualizando storage', favToString)
+    localStorage.setItem('favoritos_s',favToString);
 
+});
+console.log(favoritos_p)
 
 
 

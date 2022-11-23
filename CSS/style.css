@@ -285,7 +285,7 @@ p{
     text-decoration: none;
 }
 
-.boton-fav{
+.boton-favp{
     background:  rgba(28, 127, 51, 0.288);
     border: none;
     border-radius: 15px;
@@ -296,7 +296,17 @@ p{
     font-size: 18px;
 
 }
+.boton-favs{
+    background:  rgba(28, 127, 51, 0.288);
+    border: none;
+    border-radius: 15px;
+    padding: 15px 30px;
+    color: white;
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 18px;
 
+}
 button.btn-recomendaciones {
     background-color: rgba;
     background: rgba(28, 127, 51, 0.288);
@@ -333,12 +343,17 @@ button.btn-recomendaciones {
 }
 
 
-
-
-.boton-fav:hover{
+.boton-favp:hover{
     background-color:blue;
 }
-.boton-fav i{
+
+.boton-favs:hover{
+    background-color:blue;
+}
+.boton-favp i{
+    margin-right: 20px;
+}
+.boton-favs i{
     margin-right: 20px;
 }
 
