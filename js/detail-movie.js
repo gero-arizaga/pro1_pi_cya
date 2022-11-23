@@ -94,7 +94,7 @@ fetch(urlreco)
 
         btn_recomendaciones.addEventListener("click", function (e) {
             e.preventDefault();          //evita el comport x default del hipervinculo
-            recomendaciones.classList.toggle("ocultar"); //si oculatr no existe lo anade, de lo contrario la elimina 
+            recomendaciones.classList.toggle("ocultar"); //si oculatar no existe lo anade, de lo contrario la elimina 
         })
     })
     .catch(function (error) {
