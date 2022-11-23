@@ -24,7 +24,7 @@
             <article>
                 <form id="form" action="search-results.html" method="get">
                     <div>
-                        <input type="text" name="busqueda" id="palabraPelicula" placeholder="Buscar" id="SearchBar">
+                        <input type="text" name="busqueda" class="input" placeholder="Buscar" value="">
                     </div>
                     <div>
                         <button type="submit">Buscar</button>
@@ -33,14 +33,31 @@
             </article>
         </div>
     </header>
+    <br><br><br<b><br<br><br>
+        <div class="lds-ring loader" id="loader"><div></div><div></div><div></div><div></div></div>
     <main>
-        <div class="Peliculas_Favoritas">
-            <h1>Lista de películas favoritas</h1>
-            <section id="lista_p" class="container">
+        <div class="contenedor-cartelera">
+            
+            <div class="Peliculas_Favoritas">
+                <h2 class="titulos">Lista de películas favoritas</h2>
+                <section id="lista_p" class="container">
+        
+                
+            
 
 
-            </section>
+                </section>
+            </div>
+            <div class="Series_Favoritas">
+                <h2 class="titulos">Lista de series favoritas</h2>
+                <section id="lista_s" class="container">
+        
+                
+            
 
+
+                </section>
+            </div>
         </div>
     </main>
 
@@ -59,9 +76,7 @@
     </footer>
 
 
-    <script src="./js/favorite.js" type="text/javascript"></script>
-
-
+    <script src="./js/buscador.js"></script>
     <script src="./js/favorite.js"></script>
 
 </body>

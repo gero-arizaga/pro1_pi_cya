@@ -1,41 +1,49 @@
-
 //BOTÓN PARA FAVORITOS
-let qs = location.search;
-let qsObj = new URLSearchParams(qs);
-let idserie = qsObj.get ('idserie');
-let id = idserie;
-let boton = document.querySelector ('.boton-fav');
+let algo = new URLSearchParams(this.location.search)
+let tv_id = algo.get("s")
+let boton = document.querySelector ('.boton-favs');
 let favoritos_s = [];
 let recuperoStorage = localStorage.getItem('favoritos_s');
 
 /* Preguntamos si es distinto de nulo-  es verdarero quiero covertirlo de JSON a un array */
 if(recuperoStorage != null){
     favoritos_s = JSON.parse(recuperoStorage);
+    console.log(typeof favoritos_s);
 
 };
-if (favoritos_s.includes(idserie)) {
-    boton.innerText="Quitar de Favorito";
+let condition = favoritos_s.includes(tv_id);
+console.log(condition)
+if (favoritos_s.includes(tv_id)) {
+    boton.innerText = "Quitar de favoritos";
 }
 boton.addEventListener("click",function (e) {
     e.preventDefault()
-    if(favoritos_s.includes(id)){
-        let indice = favoritos_s.indexOf(id);
+    if(recuperoStorage != null){
+        recuperoStorage = localStorage.getItem('favoritos_s');
+        favoritos_s = JSON.parse(recuperoStorage);
+        console.log(typeof favoritos_s);
+    
+    };
+    console.log(favoritos_s.includes(tv_id))
+    if (favoritos_s.includes(tv_id)) {
+        let indice = favoritos_s.indexOf(tv_id);
         favoritos_s.splice(indice,1);
+        console.log(indice);
         boton.innerText="❤ Agregar a Favorito";
+        console.log('post agregar a favoritos', favoritos_s);
     }else{
-        favoritos_s.push(id);
+        favoritos_s.push(tv_id);
         boton.innerText="Quitar de Favorito";
+        console.log(favoritos_s);
     }
     let favToString = JSON.stringify(favoritos_s);
-    localStorage.setItem('favoritos_s',favToString)
-    
+    console.log('actualizando storage', favToString);
+    localStorage.setItem('favoritos_s',favToString);
+
 });
+console.log(favoritos_s)
 
 
-
-
-let algo = new URLSearchParams(this.location.search)
-let tv_id = algo.get("s")
 console.log(tv_id)
 
 const api_key = '81faef6942a31915ed87b416fbba64ba';
@@ -63,29 +71,17 @@ fetch(url)
 
         console.log(data);
 
-         let subtitulos = document.querySelector('.subtitulos');
-         console.log(subtitulos);
-         let fecha_estreno = document.querySelector('.fecha-estreno');
-         console.log(fecha_estreno)
-         let genero_series = document.querySelector('.genero_serie');
-        console.log(genero_series)
-         let descripcion_serie = document.querySelector('.descripcion_serie');
-            console.log(descripcion_serie)
-         let imagen = document.querySelector('#img');
-            console.log(imagen)
-         let vote = document.querySelector('.vote');
-            console.log(vote)
+       ///
         
 
 
         
-        subtitulos.innerText += ` ${ data.name }`
-        fecha_estreno.innerText += ` ${ data.first_air_date } `
-        genero_series.innerText += ` ${ data.genres.name } `  
-        genero_series.innerText += ` ${ data.genres[0].name } `
-        descripcion_serie.innerText += ` ${ data.overview } `
+        subtitulos.innerText += data.name; 
+        fecha_estreno.innerText += `Fecha de estreno: ${data.first_air_date}`;
+        genero_series.innerHTML += `<a class='generoDetail' href='./detail-genres.html?id=${data.genres[0].id}'>${data.genres[0].name}</a>`;
+        descripcion_serie.innerText += data.overview ;
         imagen.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`
-        vote.innerText += ` ${data.vote_average}`
+        vote.innerText += `Calificacion: ${data.vote_average}`;
 
 
     })
@@ -108,7 +104,7 @@ fetch(url)
              
              for (let i = 0; i < 5; i++) {
                  recomendaciones.innerHTML += `<li>
-                     <a href="detail-serie.html?p=${data.results[i].id}">
+                     <a href="detail-serie.html?s=${data.results[i].id}">
                          <img src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt="">
                          <p>${data.results[i].name}</p>
                          <p>${data.results[i].first_air_date}</p>

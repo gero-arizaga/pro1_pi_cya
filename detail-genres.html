@@ -24,7 +24,7 @@
             <article>
                 <form id="form" action="search-results.html" method="get">
                     <div>
-                        <input type="text" name="busqueda" id="palabraPelicula" placeholder="Buscar" id="SearchBar">
+                        <input type="text" name="busqueda" class="input" placeholder="Buscar" value="">
                     </div>
                     <div>
                         <button type="submit">Buscar</button>
@@ -33,78 +33,16 @@
             </article>
         </div>
     </header>
+    <br><br><br<b><br<br><br>
+        <div class="lds-ring loader" id="loader"><div></div><div></div><div></div><div></div></div>
     <main>
-        <div class="contenedor-generos">
-            <h2 class="titulos">Terror</h2>
-            <section class="cont-listas">
-                <article class="item">
-                    <a href="./detail-movie.html"> <img src="./img/thor love and thunder.jpeg" alt="Thor"></a>
-                    <h3>Thor:Thunder 2022</h3>
-                </article>
-                <article class="item">
-                    <a href="./detail-movie.html"><img src="./img/malefica2.jpeg" alt="Malefica"></a>
-                    <h3>Malefica 2014</h3>
-                </article>
-                <article class="item">
-                    <a href="./detail-movie.html"><img src="./img/jurassic world.jpeg" alt="Jurassic World"></a>
-                    <h3>Jurassic World 2022</h3>
-                </article>
-                <article class="item">
-                    <a href="./detail-movie.html"><img src="./img/top gun.jpeg" alt="Top Gun: Maverick"></a>
-                    <h3>Top Gun: Maverick 2022</h3>
-                </article>
-                <article class="item">
-                    <a href="./detail-movie.html"><img src="./img/pinocho.jpeg" alt="Pinocho"></a>
-                    <h3>Pinocho 2022</h3>
-                </article>
-            </section>
-            <h2 class="titulos"> Comedia</h2>
-            <section class="cont-listas">
-                <article class="item">
-                    <a href="./detail-serie.html"><img src="./img/Peaky Blinders.jpeg" alt="Peaky Blinders"></a>
-                    <h3>Peaky Blinders 2013</h3>
-                </article>
-                <article class="item">
-                    <a href="./detail-serie.html"><img src="./img/stranger things .jpeg" alt="Stranger Things"></a>
-                    <h3>Stranger Things 2016</h3>
-                </article>
-                <article class="item">
-                    <a href="./detail-serie.html"><img src="./img/the boys serie.jpeg" alt="the boys"></a>
-                    <h3>The Boys 2019</h3>
-                </article>
-                <article class="item">
-                    <a href="./detail-serie.html"><img src="./img/cobra kai.jpeg" alt="Cobra Kai"></a>
-                    <h3>Cobra Kai 2018</h3>
-                </article>
-                <article class="item">
-                    <a href="./detail-serie.html"><img src="./img/emily.jpeg" alt="Emily in Paris"></a>
-                    <h3>Emily in Paris 2020</h3>
-                </article>
-            </section>
-            <h2 class="titulos"> Accion</h2>
-            <section class="cont-listas">
-                <article class="item">
-                    <a href="./detail-movie.html"><img src="./img/nemesis.jpeg" alt="Nemesis"></a>
-                    <h3>Nemesis 2022</h3>
-                </article>
-                <article class="item">
-                    <a href="./detail-movie.html"><img src="./img/bestia.jpeg" alt="Bestia"></a>
-                    <h3>Bestia 2022</h3>
-                </article>
-                <article class="item">
-                    <a href="./detail-movie.html"><img src="./img/vertigo.jpeg" alt="Vertigo"></a>
-                    <h3>Vertigo 2022</h3>
-                </article>
-                <article class="item">
-                    <a href="./detail-movie.html"><img src="./img/avatar.jpeg" alt="Avatar"></a>
-                    <h3>Avatar 2010</h3>
-                </article>
-                <article class="item">
-                    <a href="./detail-movie.html"><img src="./img/rrr.jpeg" alt="RRR"></a>
-                    <h3>RRR 2022</h3>
-                </article>
-            </section>
-        </div>
+        <h2 class="titulos">Peliculas</h2>
+        <section class="cont-listasPelis">
+        </section>   
+        <h2 class="titulos">Series</h2>
+        <section class="cont-listasSeries">
+
+        </section>
     </main>
     <footer>
         <ul>
@@ -122,6 +60,7 @@
             alt="dataBase">
     </footer>
     <script src="./js/detail-genres.js"></script>
+    <script src="./js/buscador.js"></script>
 </body>
 
 </html>

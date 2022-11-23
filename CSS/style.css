@@ -109,6 +109,7 @@ a {
     font-size: 1.17em;
     margin-block-start: 1em;
     margin-block-end: 1em;
+    text-decoration: none;
 }
 
 
@@ -123,6 +124,7 @@ img{
 }
 h3{
     color: white;
+    text-decoration: none;
 
 
   }
@@ -135,18 +137,23 @@ p{
 }
 
 /*RESULTADOS DE BUSQUEDA HTML*/
-
-.resultado-busqueda{
-    display: flex;
-    flex-direction: column;
+.tituloBusqueda{    color: white;
+        font-family:'Open Sans', sans-serif; 
+    text-decoration: none;
+}
+.resultadoBusquedaP{
+    display:  flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
-    align-self: center;
-    background-color: rgba(170, 170, 170, 0.393);
-    padding: 100px;
-    margin: 0px;
-    border-radius: 100px;
-    color: white;
+    height: 650px;
+    width: 96%;  
+}
+.resultadoBusquedaS{
+    display:  flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 650px;
+    width: 96%;  
 }
 
 /*GÉNEROS HTML*/
@@ -157,6 +164,7 @@ p{
     justify-content: center;
     align-items: center;
     padding: 50px;
+    flex-wrap: wrap;
 }
    
 .generosPadre .generos{
@@ -165,31 +173,46 @@ p{
     align-items: center;
     justify-content: center;
     align-self: center;
-    background-color: rgba(170, 170, 170, 0.393);
-    padding: 100px;
-    margin: 0px;
-    border-radius: 100px;
-    font-weight: normal;
-    font-size: 45px;
-    height: 100vh;
-    width: 95%;
-}
   
-.genero-item{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: white;
-}
+ }
+ .generoa{
+ color: white;
+  background-color: rgba(170, 170, 170, 0.393);
+ padding: 70px;
+ margin: 10%;
+ border-radius: 100px;
+ font-weight: normal;
+ font-size: 45px;
+ align-items: center;
+ justify-content: center;
+ text-decoration: none;
+ }
+
   
 .main-generos{
-    background-image: url("../img/joker.jpg");
+    background-image: url("");
     background-repeat: no-repeat;
     background-position:center;
     background-size: cover;
     margin: 0px;
 }
+.generosSeries{
+    display: flex;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+   
+.generosSeries .generos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+  
+ }
 
 /*GÉNEROS DETAIL HTML*/
 
@@ -197,14 +220,40 @@ p{
     width: 90%;
     margin: auto;
 }
-
+.cont-listasSeries{
+    display:  flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 650px;
+    width: 96%;  
+}
+.cont-listasPelis{
+    display:  flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 650px;
+    width: 96%;  
+}
 /*FAVORITOS*/
 
 .contenedor-generos{
     width: 90%;
     margin: auto;
 }
-
+#lista_p{
+    display:  flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 650px;
+    width: 96%; 
+}
+#lista_s{
+    display:  flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 650px;
+    width: 96%; 
+}
 /*SERIES Y PELICULAS (DETAIL)*/
 
 .main-serie{
@@ -249,7 +298,7 @@ p{
     text-decoration: none;
 }
 
-.boton-fav{
+.boton-favp{
     background:  rgba(28, 127, 51, 0.288);
     border: none;
     border-radius: 15px;
@@ -260,7 +309,17 @@ p{
     font-size: 18px;
 
 }
+.boton-favs{
+    background:  rgba(28, 127, 51, 0.288);
+    border: none;
+    border-radius: 15px;
+    padding: 15px 30px;
+    color: white;
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 18px;
 
+}
 button.btn-recomendaciones {
     background-color: rgba;
     background: rgba(28, 127, 51, 0.288);
@@ -297,12 +356,17 @@ button.btn-recomendaciones {
 }
 
 
-
-
-.boton-fav:hover{
+.boton-favp:hover{
     background-color:blue;
 }
-.boton-fav i{
+
+.boton-favs:hover{
+    background-color:blue;
+}
+.boton-favp i{
+    margin-right: 20px;
+}
+.boton-favs i{
     margin-right: 20px;
 }
 
@@ -355,5 +419,56 @@ footer .dataBase img {
     
 
 
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 
-    
+  .loader{
+    background-color: linear-gradient(to right, #4286f4, #373B44);
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    clip-path: circle(150% at 100% 0);
+    transition: clip-path 0.8s ease-in-out;
+}
+   .loader2{
+    clip-path: circle(0% at 100% 100%);
+   } 

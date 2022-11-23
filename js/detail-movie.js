@@ -1,33 +1,49 @@
+//BOTÓN PARA FAVORITOS
 let algo = new URLSearchParams(this.location.search);
 let id_pelicula = algo.get("p");
-console.log(id_pelicula);
-
-let boton = document.querySelector(".boton-fav");
+let boton = document.querySelector ('.boton-favp');
 let favoritos_p = [];
-let recuperoStorage = localStorage.getItem("favoritos_p");
+let recuperoStorage = localStorage.getItem('favoritos_p');
 
-/* Preguntamos si es distinto de nulo-  es verdadero quiero convertirlo de JSON a un array */
-if (recuperoStorage != null) {
-  favoritos_p = JSON.parse(recuperoStorage);
-}
+/* Preguntamos si es distinto de nulo-  es verdarero quiero covertirlo de JSON a un array */
+if(recuperoStorage != null){
+    favoritos_p = JSON.parse(recuperoStorage);
+    console.log(typeof favoritos_p);
+
+};
+let condition = favoritos_p.includes(id_pelicula);
+console.log(condition)
 if (favoritos_p.includes(id_pelicula)) {
-  boton.innerText = "Quitar de Favorito";
+    boton.innerText = "Quitar de favoritos";
 }
-boton.addEventListener("click", function (e) {
-  e.preventDefault();
-  if (favoritos_p.includes(id)) {
-    let indice = favoritos_p.indexOf(id);
-    favoritos_p.splice(indice, 1);
-    boton.innerText = "❤ Agregar a Favorito";
-  } else {
-    favoritos_p.push(id);
-    boton.innerText = "Quitar de Favorito";
-  }
-  let favToString = JSON.stringify(favoritos_p);
-  localStorage.setItem("favoritos_p", favToString);
+boton.addEventListener("click",function (e) {
+    e.preventDefault()
+    if(recuperoStorage != null){
+        recuperoStorage = localStorage.getItem('favoritos_p');
+        favoritos_p = JSON.parse(recuperoStorage);
+        console.log(typeof favoritos_p);
+    
+    };
+    console.log(favoritos_p.includes(id_pelicula))
+    if (favoritos_p.includes(id_pelicula)) {
+        let indice = favoritos_p.indexOf(id_pelicula);
+        favoritos_p.splice(indice,1);
+        console.log(indice);
+        boton.innerText="❤ Agregar a Favorito";
+        console.log('post agregar a favoritos', favoritos_p);
+    }else{
+        favoritos_p.push(id_pelicula);
+        boton.innerText="Quitar de Favorito";
+        console.log(favoritos_p);
+    }
+    let favToString = JSON.stringify(favoritos_p);
+    console.log('actualizando storage', favToString)
+    localStorage.setItem('favoritos_p',favToString);
+
 });
+console.log(favoritos_p)
 
-
+//
 const api_key = "81faef6942a31915ed87b416fbba64ba";
 let url = `https://api.themoviedb.org/3/movie/${id_pelicula}?api_key=${api_key}&language=en-US`;
 
@@ -69,6 +85,46 @@ fetch(url)
 
 // api de recomendaciones pelis:
 
+ fetch(url)
+     .then(function (respuesta) {
+         return respuesta.json();
+     })
+     .then(function (data) {
+         console.log(data);
+        
+
+         subtitulos.innerText = data.title;
+         fecha_estreno.innerText = `Fecha de estreno: ${data.release_date}`;
+         genero_pelicula.innerHTML = `<p class="genero_pelicula">Genero:<a class='generoDetail' href='./detail-genres.html?id=${data.genres[0].id}'>${data.genres[0].name}</a></p>`;
+         descripcion_peli.innerText = data.overview;
+         imagen.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`;
+         votos.innerText= `Calificacion: ${data.vote_average}`;
+         time.innerText = `Duracion: ${data.runtime} minutes`;
+     })
+     .catch(function (error) {
+                console.log(error);
+    })
+
+ //boton ver  pelis similares  -- chequear codigo
+
+ let botonSimil = document.getElementById(".botonSimil");
+window.onclick = function(event) {
+     if (event.target == botonSimil) {
+         botonSimil.style.display = "none";
+     }
+ }
+
+
+ 
+ // ver titulos  similares -- chequear codigo
+
+//let urlreco = `https://api.themoviedb.org/3/movie/${id_pelicula}/recommendations?api_key=81faef6942a31915ed87b416fbba64ba`
+let btn = document.querySelector('.botonSimil');
+
+
+
+//let url = `https://api.themoviedb.org/3/movie/${id_pelicula}?api_key=${api_key}&language=en-US`
+let detalle_pelicula = document.querySelector(".cont-detail")
 let urlreco = `https://api.themoviedb.org/3/movie/${id_pelicula}/recommendations?api_key=${api_key}`;
 
 fetch(urlreco)

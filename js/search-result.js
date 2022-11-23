@@ -1,69 +1,76 @@
 let api_key = '81faef6942a31915ed87b416fbba64ba'
 let qs = location.search;
 let qsObj = new URLSearchParams(qs);
-let personaje = qsObj.get('busqueda');
+let busqueda = qsObj.get('busqueda');
 
-let urlbusqueda = `https://api.themoviedb.org/3/movie?api_key= ${api_key}&language=en-US&page=1`
 
-let searchBar = document.getElementById("searchBar");
+let urlBusquedaPeli = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&language=en-US&query=${busqueda}`;
+let urlBusquedaSerie = `https://api.themoviedb.org/3/search/tv?api_key=${api_key}&language=en-US&query=${busqueda}`;
 
-function runSearch (keyword) {
-    let url = `${urlbusqueda}${api_key}&query=${keyword}`;
-    document.getElementById("results-list").innerHTML = "";
-    fetch(url)
-    .then(result => result.json())
-    .then(function (data) {
-    let seriesSearchResult = data.results;
-    console.log(seriesSearchResult);
-    if (data.results.length !== 0){
-        let resultsList = document.getElementById("resultado-busqueda");
-        for (let i = 0; i < seriesSearchResult.length; i++) {
-        id = seriesSearchResult[i].id
-        if (seriesSearchResult[i].busqueda !== null) {
-            resultsList.innerHTML += "<ul class='result'><li>" + seriesSearchResult[i].name + "</li>" + "<li><a id='detalles' onclick='serieSelected("+ id +")' href='page5-detalle-series.html'><img class='series-img' src='https://image.tmdb.org/t/p/original/" + seriesSearchResult[i].poster_path + "' alt=''></a></li></ul>"
-            } 
-        else {
-            resultsList.innerHTML += "<ul class='result'><li>" + seriesSearchResult[i].name + "</li>" + "<li><a id='detalles' onclick='serieSelected("+ id +")' href='page5-detalle-series.html'><img class='series-img' src='assets/IMG/noimage.png' alt=''></a></li></ul>"
-            }
-        }
-    } 
-    else {
-        let resultTitle = document.getElementById("results-title")
-        resultTitle.innerHTML = "No search results found";
-    }
-})}
-    
-let url = ``;
-    
-    fetch(url)
-    .then(function(response) {
-        return response.json();
-    }
-    ).then(function(data) {
-         //Acá ya tenemmos los datos finales y es donde debemos escribir nuestro código.
-         console.log(data);
-         let arrayDePersonajes = data.results;
-    
-         //1 Donde: Capturo el elemento html en donde quiero hacer una modificación
-         let seccion = document.querySelector('.container');
-         let allCharacters = [];
-    
-         console.log(arrayDePersonajes);
-         //2 Qué: recorro la información de la api y la organizo para mostarla en el html
-         for(let i=0; i<arrayDePersonajes.length; i++){
-             //Dentro del for voy acumulando en la variable una estructura html por cada personaje del array.
-             allCharacters += `<a href="./detalle.html?buscador=${arrayDePersonajes[i].id}"><article>
-                                 <img src=${arrayDePersonajes[i].image} alt='${arrayDePersonajes[i].name}' />
-                                 <p>Name: ${arrayDePersonajes[i].name} </p>
-                                 <p>Status: ${arrayDePersonajes[i].status} </p>
-                             </article></a>`
-         }
-         //Con toda la estructura html completa ahora la paso al DOM
-         seccion.innerHTML = allCharacters;
-        return data;
-    }
-    ).catch(function(error) {
-        return error;
-    }
-    );
+let tituloP = document.querySelector('.titulosBusqueda');
+let listaP = document.querySelector('.resultadoBusquedaP');
+let listaS = document.querySelector('.resultadoBusquedaS');
 
+
+fetch(urlBusquedaPeli)
+.then(function (respuesta) {
+    return respuesta.json()
+}
+)
+.then(function (data) {
+    console.log(data);
+    if (data.results.length == 0) {
+        tituloP.innerHTML = `No hay resultados para su búsqueda <strong>"${busqueda}"</strong>`
+        listaP.innerHTML = `<img src="https://cdn-icons-png.flaticon.com/512/6202/6202861.png" alt="">`
+    } else {
+        tituloP.innerHTML = `Estos son los titulos que coinciden con tu busqueda de <strong>"${busqueda}"</strong>:`
+        for (let i = 0; i < 5; i++) {
+        let busqueda = data.results[i]
+        listaP.innerHTML += ` <article class="item">
+        <a href="./detail-movie.html?p=${busqueda.id}"> <img class="imagenes" src="https://image.tmdb.org/t/p/w500/${busqueda.poster_path}" alt=""></a>
+                                <a href="./detail-movie.html?p=${busqueda.id}"><h3>${busqueda.title}</h3></a>
+                                <a href="./detail-movie.html?p=${busqueda.id}"><p>${busqueda.release_date}</p></a>
+                                <a href="./detail-movie.html?p=${busqueda.id}" class="ver_mas">Ver mas</a>
+                                    </article>` 
+    }}
+
+    return data;
+}
+)
+.catch(function (error) {
+    return error;
+}
+)
+
+fetch(urlBusquedaSerie)
+.then(function (response) {
+    return response.json()
+}
+)
+.then(function (data) {
+    console.log(data);
+    if (data.results.length == 0) {
+        tituloS.innerHTML = `No hay resultados para su búsqueda: <strong>"${busqueda}"</strong>`
+        listaS.innerHTML = `<img src="https://cdn-icons-png.flaticon.com/512/6202/6202861.png" alt="">`
+    } else {
+ 
+        for (let i = 0; i < 5; i++) {
+        let busquedaS = data.results[i]
+        listaS.innerHTML += `<article class="item">
+        <a href="./detail-serie.html?s=${busquedaS.id}"> <img class="imagenes" src="https://image.tmdb.org/t/p/w500/${busquedaS.poster_path}" alt=""></a>
+                                        <a href="./detail-serie.html?s=${busquedaS.id}"<h3>${busquedaS.name}</h3> </a><br>
+                                        <a href="./detail-serie.html?s=${busquedaS.id}"<p>${busquedaS.first_air_date}</p> </a>
+                                        <a href="./detail-serie.html?s=${busquedaS.id}">Ver mas</a>
+                                    </article>` 
+    }}
+
+    return data;
+}
+)
+.catch(function (error) {
+    return error;
+}
+)
+window.addEventListener('load', function (e) {
+    this.document.querySelector('#loader').classList.toggle('loader2')
+})
