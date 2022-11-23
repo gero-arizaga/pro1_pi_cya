@@ -107,7 +107,7 @@ fetch(url)
 
 
 
-// let detalle_pelicula = document.querySelector(".cont-detail")
+
 let urlreco = `https://api.themoviedb.org/3/movie/${id_pelicula}/recommendations?api_key=${api_key}`;
 
 fetch(urlreco)
